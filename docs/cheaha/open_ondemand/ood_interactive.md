@@ -60,19 +60,61 @@ As shown earlier, some software can be run outside of the VNC session. Setup for
 
 ### RStudio Server
 
-RStudio is available for use graphically in your browser via OOD. As with other standalone programs, you'll need to select the resources required using the job creation form. You'll also need to select both the version of RStudio you wish to use, and the version of R you wish to use. The job creation form is shown below.
-
-![!RStudio Server job request form.](./images/ood_rstudio_server_form.png)
-
-To adjust the environment, please use the Environment Setup box to load modules or Anaconda environments. A common strategy when there is difficulty building R packages is to search for it on [Anaconda](../software/software.md#anaconda-on-cheaha), create an Anaconda environment with that package already built, and load the environment in the Environment Setup box. An example is shown below.
+RStudio is available for use graphically in your browser via OOD. As with other standalone programs, you'll need to select the resources required using the job creation form. You'll also need to select both the version of RStudio you wish to use, and the version of R you wish to use. To adjust the environment, please use the Environment Setup box to load modules besides R and RStudio as seen below. All other modules and paths should be loaded here as it is difficult to load and consistently use modules once RStudio starts.
 
 ![!RStudio Server job request form Environment Setup box.](./images/ood_rstudio_server_env_setup_box.png)
 
 <!-- markdownlint-disable MD046 -->
 !!! important
 
-    We have recently changed the way we deploy RStudio on OOD. There are now two versions available, and one is marked with the text `(deprecated)`. The version without the deprecation notice is the new deployment method and is preferred for use. It is more flexible and more robust, and will allow us to support you more quickly and easily. The version with the deprecation notice is the previous containerized version. Because it is deprecated, we will not provide additional support for that version. Please move your workflows to the newer version.
+    Unless an older version of R is absolutely necessary, it is highly suggested to always use the newest version of R and RStudio for both updated functionality within those software as well as updated compilers for package installation. Using the newest version of R solves most known package installation errors.
+<!-- markdownlint-enable MD046 -->
+
+#### RStudio and Python
+
+If you have a workflow that uses both R and Python, it is strongly recommended to use the [reticulate](https://rstudio.github.io/reticulate/) package along with Anaconda environments. Reticulate allows researchers to load Python packages into a native R session as objects. For instance, if someone prefer some functionality of the `pandas` package but has other code already written in R, they can import `pandas` to R and use both simultaneously.
+
+This also allows researchers to download precompiled command line binaries into an Anaconda environment and easliy use them in their R scripts.
+
+For setup, use the following steps:
+
+1. In a terminal on a compute node, either in an HPC Desktop job or by clicking the blue Host button on any job card:
+
+    1. Load the `Anaconda3` module
+    2. Create an Anaconda environment. More information about how to create Anaconda environments can be found [in our documentation](../../workflow_solutions/using_anaconda.md).
+    3. Activate your environment and install your requuired python packages using either `pip install` or `conda install` depending on the package source.
+
+    <!-- markdownlint-disable MD046 -->
+    !!! note
+
+        The preceding steps should only need to be run once. If other Python packages need to be installed in the same environment, repeat steps 1 and 3. You will not need to recreate your environment.
+    <!-- markdownlint-enable MD046 -->
+
+2. In RStudio:
+
+    1. Add the command `module load Anaconda3` to the Environment Setup window when requesting the RStudio job.
+    2. If not already installed, install the `reticulate` package using either `install.packages` or the [renv](#rstudio-projects-and-renv) package.
+    3. Use `reticulate::use_condaenv('env_name')` to load your conda environment.
+    4. From here, you will be able to interact with all of the python packages and non-python precompiled binaries in your Anaconda environment using R and RStudio. Please read more about how to do that in [reticulate's documentation](https://rstudio.github.io/reticulate/#importing-python-modules).
+
+For cases where your R code only needs access to precompiled binaries or libraries and does not need to import any Python libraries, you can instead create your Anaconda environment and add the following lines into the Environment Setup window:
+
+``` bash
+module load Anaconda3
+conda activate <env_name>
+```
+
+This will add those binaries and libraries to your environment `$PATH` which RStudio will inherit.
+
 <!-- markdownlint-disable MD046 -->
+!!! important
+
+    If you're wanting to directly use any Python package in R, **DO NOT** include the `conda activate` command in the Environment Setup. Use `reticulate` instead as described above.
+<!-- markdownlint-enable MD046 -->
+
+#### RStudio Projects and renv
+
+The most recent versions of RStudio installed on Cheaha support R Projects as well as package management through the `renv` package. Please read more about improving analysis reproducibility using both of these tools in our [workflow solutions](../../workflow_solutions/r_environments.md)
 
 #### Using Pandoc and `knitr` within RStudio
 
@@ -93,11 +135,24 @@ Pandoc is a tool for transforming various markup and markdown formatted document
 
 3. Start the job and use RStudio and `knitr` as expected.
 
+#### Starting With a Clean Session to Avoid Errors
+
+By default, RStudio loads the most recently opened project at startup and restores the `.RData` file into the workspace. If you only work on a single project, this may be helpful. If you frequently change projects then these default settings can create difficult-to-diagnose errors, or you may inadvertently alter a project by adding incorrect packages, for example.
+
+To reduce the risk of these kinds of errors, uncheck the highlighted boxes below in the RStudio Options menu under the "General" selection.
+
+- Restore most recently opened project at startup
+- Restore .RData into workspace at startup
+
+![!image showing boxes to uncheck highlighted with red markers](images/ood_rstudio_server_clean_session.png)
+
 ### Jupyter Notebook
 
 Jupyter Notebooks are available for use graphically in your browser via OOD. As with other standalone programs, you'll need to select the resources required using the job creation form. The form is shown below.
 
 ![!Jupyter Notebook job request form.](./images/ood_jupyter_notebook_form.png)
+
+Jupyter Notebooks are commonly used with Anaconda environments. If you are unfamiliar with Anaconda environments please see the [Working with Anaconda Environments section](#working-with-anaconda-environments) below before continuing here.
 
 To adjust the environment, please use the Environment Setup box to load modules. For GPU applications it is generally necessary to load one of our `cuda##.#/toolkit` modules, and possibly a `cuDNN` module. These are required for `tensorflow`, `keras` and `pytorch`. Use `module spider cuda` and `module spider cudnn` to view the list of appropriate modules. An example is shown below.
 
@@ -107,6 +162,12 @@ To adjust the environment, please use the Environment Setup box to load modules.
 !!! note
 
     If you get a Failed to Connect message when opening the job, close the tab and wait a couple of minutes. Jupyter is still initializing and takes some time after the job first begins running.
+<!-- markdownlint-enable MD046 -->
+
+<!-- markdownlint-disable MD046 -->
+!!! important
+
+    If you are not able to see your environment, you may need to install the `ipykernel` package. It is required for Jupyter to recognize your environment. See [Packages for Jupyter](../../workflow_solutions/using_anaconda.md#packages-for-jupyter) for more information.
 <!-- markdownlint-enable MD046 -->
 
 <!-- markdownlint-disable MD046 -->
@@ -120,6 +181,10 @@ To adjust the environment, please use the Environment Setup box to load modules.
 
     Having `conda activate` statements in the `Environment Setup` field can cause unexpected and silent job failure. Please do not activate conda environments in the Environment Setup field.
 <!-- markdownlint-enable MD046 -->
+
+### Working with Anaconda Environments
+
+For information on working with Anaconda environments please see our [Using Anaconda page](../../workflow_solutions/using_anaconda.md). The please review our [Cheaha-specific Anaconda page](../software/software.md#anaconda-on-cheaha) for important tips and how to avoid common pitfalls.
 
 #### Extra Jupyter Arguments
 
@@ -185,6 +250,10 @@ To create a new environment, click the `+` button at the top of the `Current env
 
 After successfully creating your environment, navigate to the Files tab. You can create a new notebook using the `New` dropdown menu in the top right. Select your virtual environment of choice, and a notebook will be created and opened.
 
+#### Help GPU is not Available with TensorFlow or PyTorch
+
+If you are using Jupyter with TensorFlow or PyTorch and no GPU is found, please see our SLURM GPU page sections on [TensorFlow Compatibility](../slurm/gpu.md#tensorflow-compatibility) and [PyTorch Compatibility](../slurm/gpu.md#pytorch-compatibility).
+
 ### Matlab
 
 Matlab is available for use graphically in your browser via OOD. As with other standalone programs, you'll need to select the resources required using the job creation form. The form is shown below.
@@ -217,3 +286,7 @@ This section is dedicated to using this feature with Anaconda on Cheaha. To use 
     ```
 
 You may optionally verify that Python works correctly by entering `py.list(["hello", "world"])`. A python list object should appear in the workspace.
+
+#### Using a GPU with MATLAB
+
+Please see the [MATLAB Section on our GPU Page](../slurm/gpu.md#matlab).

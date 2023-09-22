@@ -12,6 +12,12 @@ Benefits of Anaconda:
 
 Anaconda can also install Pip and record which Pip packages are installed, so Anaconda can do everything Pip can, and more.
 
+<!-- markdownlint-disable MD046 -->
+!!! important
+
+    If using Anaconda on Cheaha, please see our [Anaconda on Cheaha page](../cheaha/software/software.md#anaconda-on-cheaha) for important details and restrictions.
+<!-- markdownlint-enable MD046 -->
+
 ## What is my best solution for installing Anaconda?
 
 If you are using a local machine or doing general purpose software development, or have a particular package in mind, go [here](#installing-anaconda) to install Anaconda.
@@ -28,7 +34,7 @@ Anaconda installation instructions are located here: <https://docs.anaconda.com/
 
 ### Installing Miniconda
 
-Miniconda is a lightweight version of Anaconda. While Anaconda's base environment comes with Python, the Scipy stack, and other common packages pre-installed, Miniconda comes with no packages installed. This is an excellent alternative to the full Anaconda installation for environments where minimal space is available or where setup time is important, like [virtual machines](../uab_cloud/introduction.md) and [containers](getting_containers.md).
+Miniconda is a lightweight version of Anaconda. While Anaconda's base environment comes with Python, the Scipy stack, and other common packages pre-installed, Miniconda comes with no packages installed. This is an excellent alternative to the full Anaconda installation for environments where minimal space is available or where setup time is important, like [virtual machines](../uab_cloud/index.md) and [containers](getting_containers.md).
 
 Miniconda installation instructions are located here: <https://docs.conda.io/en/latest/miniconda.html>.
 
@@ -39,6 +45,12 @@ Anaconda is a package manager, meaning it handles all of the difficult mathemati
 Anaconda is structured around environments. Environments are self-contained collections of researcher-selected packages. Environments can be changed out using a simple package without requiring tedious installing and uninstalling of packages or software, and avoiding dependency conflicts with each other. Environments allow researchers to work and collaborate on multiple projects, each with different requirements, all on the same computer. Environments can be installed from the command line, from pre-designed or shared YAML files, and can be modified or updated as needed.
 
 The following subsections detail some of the more common commands and use cases for Anaconda usage. More complete information on this process can be found at the [Anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#).
+
+<!-- markdownlint-disable MD046 -->
+!!! important
+
+    If using Anaconda on Cheaha, please see our [Anaconda on Cheaha page](../cheaha/software/software.md#anaconda-on-cheaha) for important details and restrictions.
+<!-- markdownlint-enable MD046 -->
 
 ### Create an Environment
 
@@ -241,16 +253,6 @@ Efficient software developers live the mantra "Don't repeat yourself". Part of n
 
 ## Speeding Things up with Mamba
 
-[Mamba](https://github.com/mamba-org/mamba#readme) is an alternative to Anaconda that uses `libsolv` and parallel processing to install environments more quickly, sometimes by an order of magnitude. Mamba will also discover conflicts very quickly. Mamba is available as a [package](https://anaconda.org/conda-forge/mamba) via Anaconda. Currently Mamba cannot be installed on Cheaha, only on self-maanged systems like cloud.rc instances. To install use the following.
+If you are using Cheaha, Mamba is already installed in the base environment. To learn how to use Mamba on Cheaha, please read our [Cheaha Software page](../cheaha/software/software.md#speedups-using-mamba). For use in your own environment, please read on.
 
-```bash
-conda activate base
-conda update --all
-conda install -n base -c conda-forge mamba
-```
-
-<!-- markdownlint-disable MD046 -->
-!!! warning
-
-    Mamba must be installed in the base environment to function correctly! If you are using Cheaha, and cannot install in the base environment, see our workaround [here](../cheaha/software/software.md#speedups-using-mamba)
-<!-- markdownlint-enable MD046 -->
+[Mamba](https://github.com/mamba-org/mamba#readme) is an alternative to Anaconda that uses `libsolv` and parallel processing to install environments more quickly, sometimes by an order of magnitude. Mamba will also discover conflicts very quickly. To install Mamba, please follow the instructiosn available at the [official documentation](https://mamba.readthedocs.io/en/latest/installation.html#fresh-install).

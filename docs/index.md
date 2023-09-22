@@ -8,7 +8,7 @@ Research Computing provides services to researchers in these core areas:
 
 - _Data Analysis_: using the High Performance Computing (HPC) fabric [Cheaha](cheaha/getting_started.md) for batch data processing.
 - _Data Sharing_: supporting trusted information exchange to spark new ideas via our [Storage](data_management/storage.md) system.
-- _Application Development_: providing virtual machines and web-hosted development tools empowering researcher via our [cloud.rc](uab_cloud/introduction.md) fabric.
+- _Application Development_: providing virtual machines and web-hosted development tools empowering researcher via our [cloud.rc](uab_cloud/index.md) fabric.
 
 ## Contact Us
 
@@ -17,10 +17,10 @@ Please reach out to us via email at <support@listserv.uab.edu> to create a suppo
 For face-to-face support please visit us in our Zoom office hours held weekly:
 
 - Mondays 10:00 AM to 12:00 PM:
-[Zoom](https://uab.zoom.us/j/84019898491?pwd=bWlYaldMWUoyY0lCcGhuT3dmZjZLQT09)
+[Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
 
 - Thursdays 10:00 AM to 12:00 PM:
-[Zoom](https://uab.zoom.us/j/96229651103?pwd=RmpsWG1NYkxjclgxTThXb1h2bVBndz09)
+[Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
 
 **New!** Please visit our [status page](https://uabstatus.statuscast.com/#!/incidentlist?componentId=34990).
 
