@@ -13,11 +13,12 @@ Benefits of Anaconda:
 Anaconda can also install Pip and record which Pip packages are installed, so Anaconda can do everything Pip can, and more.
 
 <!-- markdownlint-disable MD046 -->
+
 !!! important
 
     If using Anaconda on Cheaha, please see our [Anaconda on Cheaha page](../cheaha/software/software.md#anaconda-on-cheaha) for important details and restrictions.
-<!-- markdownlint-enable MD046 -->
 
+<!-- markdownlint-enable MD046 -->
 
 ## Using Anaconda
 
@@ -28,9 +29,11 @@ Anaconda is structured around environments. Environments are self-contained coll
 The following subsections detail some of the more common commands and use cases for Anaconda usage. More complete information on this process can be found at the [Anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#).
 
 <!-- markdownlint-disable MD046 -->
+
 !!! important
 
     If using Anaconda on Cheaha, please see our [Anaconda on Cheaha page](../cheaha/software/software.md#anaconda-on-cheaha) for important details and restrictions.
+
 <!-- markdownlint-enable MD046 -->
 
 ### Create an Environment
@@ -221,9 +224,11 @@ dependencies:
 Now we can be sure that the correct versions of the software will be installed on our collaborator's machines.
 
 <!-- markdownlint-disable MD046 -->
+
 !!! note
 
     The example above is provided only for illustration purposes. The error has since been fixed, but the example above really happened and is helpful to explain version pinning.
+
 <!-- markdownlint-enable MD046 -->
 
 #### Good Software Development Practice
