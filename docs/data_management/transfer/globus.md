@@ -6,9 +6,6 @@ UAB Research Computing uses High Assurance Endpoints and Collections, meaning th
 
 1. You will be prompted to prove authorization each time you access a UAB Research Computing endpoint, collection or attempt to download files to your local machine from such an endpoint or collection. If you are already logged in with Single Sign-On (SSO) the process is simple. If not, you will need to authenticate with SSO.
 2. Bookmarks are not allowed in High Assurance endpoints and collections.
-
-For more detailed information on High Assurance please see the Globus official pages below:
-
 - [High Assurance Security Overview](https://docs.globus.org/security/high-assurance-overview/)
 - [High Assurance Collections](https://docs.globus.org/high-assurance/)
 
