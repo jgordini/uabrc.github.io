@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -29,5 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          permissions: read
           publish_dir: ./site
