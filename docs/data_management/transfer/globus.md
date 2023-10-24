@@ -36,9 +36,6 @@ To manage your identities, navigate to <https://app.globus.org/account/identitie
 ## Moving Data Between Endpoints
 
 1. Log in to the Globus App online at <https://app.globus.org> using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
-
-    ![!Globus login page with University of Alabama at Birmingham entered into the text box](./images/globus_001_login.png)
-
 2. Click File Manager in the left-hand navigation pane.
 
     ![!Navigation pane with File Manager selected.](./images/globus_002_nav_pane_file_manager.png)
@@ -52,10 +49,8 @@ To manage your identities, navigate to <https://app.globus.org/account/identitie
     ![!Globus File Manager interface with mouse pointer over left-hand Collection Search box.](./images/globus_004_search_bar.png)
 
     1. Begin typing in the box to search for an endpoint. To find UAB-related endpoints, search for "UAB". There are two Cheaha endpoints
-
         1. Cheaha cluster on-campus (UAB Science DMZ) for machines that are either on the UAB Campus Network, or connected to the UAB Campus VPN.
         2. Cheaha cluster off-campus (UAB Science DMZ) for machines that are _not_ on the UAB Campus Network and _not_ on the UAB Campus VPN.
-
     2. The "Recent" tab shows endpoints that have most recently been used.
 
         ![!Globus Collection Search Recent tab showing two endpoints.](./images/globus_005_recent_tab.png)
@@ -218,7 +213,6 @@ It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this i
 ### Creating a Shared Collection
 
 1. Click "Endpoints" in the left-hand navigation pane.
-
 2. Click the "Administered By You" tab.
 
     ![!Globus Endpoints page with Administered by You selected, showing two endpoints. One of the endpoints is a shared endpoint.](./images/globus_100_shared_admin_tab.png)
@@ -283,7 +277,6 @@ It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this i
 ### Deleting a Shared Collection
 
 1. Click "Endpoints" in the left-hand navigation pane, then c
-
 2. Click the "Administered By You" tab.
 
     ![!Globus Endpoints page with Administered by You tab selected, showing two endpoints.](./images/globus_100_shared_admin_tab.png)
