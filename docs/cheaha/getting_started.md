@@ -1,6 +1,6 @@
 # Getting Started
 
-Cheaha is a High Performance Computing (HPC) resource intended primarily for batch processing. We offer a user-friendly portal website [Open OnDemand](#open-ondemand) with graphical interfaces to the most common features, all in one place.
+Cheaha is a High Performance Computing (HPC) resource intended primarily for batch processing of research computing software. We offer a user-friendly portal website Open OnDemand with graphical interfaces to the most common features, all in one place. Read on to learn more about our resources and how to access them.
 
 ## Getting Help
 
@@ -8,52 +8,33 @@ Please [Contact Us](../index.md#contact-us) with requests for support. Tips on g
 
 ## Account Creation
 
-### UAB Users
-
-Please visit [https://rc.uab.edu](https://rc.uab.edu) to create an account. More information can be found [here](../account_management/uab_researcher.md).
-
-### Outside Collaborator
-
-Collaborators outside UAB will need sponsorship from a current UAB researcher through XIAS. The UAB researcher will need to create a project to associate the outside collaborator with and then add that user to the project. The outside collaborator will then be able to sign up to use Cheaha. Use the following instructions to help set up a XIAS account:
-
-For the UAB sponsor:
-
-1. [Create a XIAS Site](../account_management/xias_sites.md)
-2. [Add the external collaborator](../account_management/xias_users.md)
-
-For the external collaborator after the sponsor has completed the previous instructions:
-
-1. [Create an account and access Cheaha](../account_management/xias_guest.md)
+Please visit our [Account Creation page](../account_management/cheaha_account.md) for detailed instructions on creating a Cheaha account.
 
 ## Accessing Cheaha
 
-The primary method for accessing Cheaha is through our online portal website, Open OnDemand, available at [https://rc.uab.edu](https://rc.uab.edu). We have more detailed documentation on using Open OnDemand located [further in](./open_ondemand/ood_main.md).
+The primary method for accessing Cheaha is through our online portal website, Open OnDemand. To login to our portal, navigate to our <https://rc.uab.edu>, which does not require an on-campus connection nor the UAB Campus VPN. You should be presented with UAB's Single Sign-on page, which will require use of [Duo 2FA](https://www.uab.edu/it/home/security/2-factor). Login using the appropriate credentials laid out at our [Account Creation page](../account_management/cheaha_account.md).
 
-The portal features a [file browser](./open_ondemand/ood_files.md), [job composer](./open_ondemand/ood_jobs.md) and various [interactive applications](./open_ondemand/ood_interactive.md) including a remote desktop, Jupyter, RStudio and MATLAB, among others. There is also a [terminal](./open_ondemand/ood_main.md#shell-access) usable directly in the browser for very basic functions such as file management.
+[SSH](../uab_cloud/remote_access.md#command-line-via-ssh) may be used to access Cheaha. Connect to host `cheaha.rc.uab.edu` on port `22`.
+
+## Open OnDemand Features
+
+The Open OnDemand portal features a [file browser](./open_ondemand/ood_files.md), [job composer](./open_ondemand/ood_jobs.md) and various [interactive applications](./open_ondemand/ood_interactive.md) including a remote desktop, Jupyter, RStudio and MATLAB, among others. There is also a [terminal](./open_ondemand/ood_main.md#shell-access) usable directly in the browser for very basic functions such as file management. More detailed documentation may be found on our [Open OnDemand page](./open_ondemand/ood_main.md).
 
 ## Hardware
 
-A full list of the available hardware can be found [furthur in](./hardware.md).
+A full list of the available hardware can be found on our [hardware page](./hardware.md).
 
 ### Storage
 
-#### User Storage
+All researchers are granted 5 TB of individual storage when they [create their Research Computing account](../account_management/cheaha_account.md).
 
-Each user is allocated 5 TB of personal storage by default. This storage quota is shared between the `USER_DATA` (`/data/user/<blazerid>`) and the `HOME` (`/home/<blazerid>`) directories. More information on storage can be [found here](../data_management/storage.md).
+Shared storage is available to all Lab Groups and Core Facilities on campus. Shared storage is also available to UAB Administration groups.
 
-#### Project Directories
-
-In addition to personal storage, Primary Investigators may request additional shared storage for their lab personnel. This space is given a default size of 25 TB. Each PI may have one project space. To request project storage space, the PI should email support at support@listserv.uab.edu with the name of the project as well as the Blazer IDs of the researchers to give access to. Any future requests for giving or removing access must come from the PI.
-
-<!-- markdownlint-disable MD046 -->
-!!! danger
-
-    **There are no automatic backups of any data on Cheaha**. If the system undergoes a complete crash, data stored on Cheaha may be lost and will be unrecoverable. Make backups of raw data and analysis scripts such as [Box](https://www.box.com) and [Github](https://www.github.com) or [Gitlab](https://gitlab.rc.uab.edu).
-<!-- markdownlint-enable MD046 -->
+Please visit our [Storage page](../data_management/storage.md) for detailed information about our individual and shared storage options.
 
 ### Etiquette
 
-[Quotas](./slurm/sbatch_usage.md#slurm-partitions) are in place to ensure any one user can't monopolize all resources.
+[Quality-of-Service (QoS) limits](hardware.md#quality-of-service-qos-limits) are in place to ensure any one user can't monopolize all resources.
 
 #### Running Tasks on Compute Nodes
 
@@ -81,12 +62,12 @@ Slurm is our job queueing software used for submitting any number of job scripts
 
 ## Software
 
-A large variety of software is available on Cheaha as modules. To view and use these modules see [the following documentation](./lmod.md).
+A large variety of software is available on Cheaha as modules. To view and use these modules see [the following documentation](./software/modules.md).
 
-For new software installation, please try searching [Anaconda](./conda.md) for packages first. If you still need help, please [send a support ticket](../help/support.md)
+For new software installation, please try searching [Anaconda](../workflow_solutions/using_anaconda.md) for packages first. If you still need help, please [send a support ticket](../help/support.md)
 
 ### Conda Packages
 
-A significant amount of open-source software is distributed as Anaconda or Python libraries. These libraries can be installed by the user without permission from Research Computing using Anaconda environments. To read more about using Anaconda virtual environments see [the following documentation](./conda.md).
+A significant amount of open-source software is distributed as Anaconda or Python libraries. These libraries can be installed by the user without permission from Research Computing using Anaconda environments. To read more about using Anaconda virtual environments see our [Anaconda page](./software/software.md#anaconda-on-cheaha).
 
 If the software installation instructions tell you to use either `conda install` or `pip install` commands, the software and its dependencies can be installed using a virtual environment.

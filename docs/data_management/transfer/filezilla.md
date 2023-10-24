@@ -10,7 +10,7 @@ To download the program, go to [the FileZilla site](https://filezilla-project.or
 
 Once FileZilla is installed and you open it, you will see the following window
 
-![!FileZilla window. ><](./images/filezilla_on_startup.png)
+![!FileZilla window.](./images/filezilla_on_startup.png)
 
 A file browser for the local machine FileZilla is running on is on the left while the file system for the remote site will be shown on the right once a remote site has been connected.
 
@@ -25,11 +25,11 @@ You can easily connect to a remote site using the QuickConnect bar near the top 
 
 Click `Quickconnect` and you will be connected to the remote storage system. The window should now look like:
 
-![!Remote connection showing on the right side of the FileZilla window. ><](./images/filezilla_connected.png)
+![!Remote connection showing on the right side of the FileZilla window.](./images/filezilla_connected.png)
 
 When connecting in the future, you will be able to select the connection from the dropdown arrow next to the Quickconnect button.
 
-In both the local and remote panes, you can navigate to the directories you are transferring from and to. You only have access to directories you can normally access on Cheaha, so your user space as well as any project directories you have been added to.
+In both the local and remote panes, you can navigate to the directories you are transferring from and to. You only have access to directories you can normally access on Cheaha, so your [Individual Storage](../storage.md#what-individual-storage-solutions-are-available) as well as any [Project Storage](../storage.md#what-shared-storage-solutions-are-available) directories you have been added to.
 
 ### Transferring Data
 
