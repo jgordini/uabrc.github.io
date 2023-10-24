@@ -16,15 +16,15 @@ Individual allocations on Long-Term Storage (LTS) are also available upon reques
 
 To request individual Long-Term Storage, please first read and understand how [Long-Term Storage](./lts/index.md) differs from traditional filesystems, like GPFS on Cheaha. Decide if it is suitable for your needs. Then please feel free to contact [Support](../help/support.md).
 
-## What Shared Storage Solutions are Available?
+### What Shared Storage Solutions are Available?
 
 Shared Storage is available via two services. We have Project Storage (located in `/data/project` or Cheaha) and [Long-Term Storage (LTS)](./lts/index.md). The two offerings are suited to different sets of use-cases, so please read on to determine which may be most suitable.
 
 Project Storage is best-suited for changing or dynamic data. Specifically:
 
-    - Data needing/undergoing analysis
-    - Exploratory data
-    - Temporary data needed longer than 30 days
+        - Data needing/undergoing analysis
+        - Exploratory data
+        - Temporary data needed longer than 30 days
 
 In contrast, [Long-Term Storage](./lts/index.md) is best-suited for unchanging or static data. Specifically:
 
@@ -138,7 +138,6 @@ If you are using `amperenodes` and the A100 GPUs, then it is highly recommended 
 Be sure to clean up `/local/$SLURM_JOB_ID` after your job is complete! An example script to automate this process is shown below.
 
 ```bash
-```
 #!/bin/bash
 #SBATCH ...
 
@@ -192,7 +191,7 @@ Software known to use `tmp` by default with no know workaround.
 
 - [Keras](https://github.com/tensorflow/tensorflow/blob/5bb81b7b0dd140a4304b92530614502c0c61a150/tensorflow/python/keras/utils/data_utils.py#L205) has `/tmp/.keras` hardcoded as a fallback cache directory if `~/.keras` is inaccessible. See [here](https://github.com/tensorflow/tensorflow/issues/38831) for a discussion of the issue.
 
-## How much space do I have left?
+## How much space do I have left
 
 - **Individual Storage**: use the command `quota-report` to see usage in `/data/user/$USER` and `/scratch/$USER`.
 - **Project Storage**: use the command `proj-quota-report <project>`. Replace `<project>` with the appropriate project directory name, i.e., `/data/project/<project>`. Be sure to _not_ use a trailing slash. Use `proj-quota-report mylab` not `proj-quota-report mylab/`.
