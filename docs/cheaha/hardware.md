@@ -12,9 +12,9 @@ The following hardware summaries may be useful for selecting partitions for work
 
 The "~" character in the tables below is used to indicate...
 
-## Cheaha HPC Cluster
+# Cheaha HPC Cluster
 
-### Summary
+## Summary
 
 ### Examples of how to make use of the table
 
@@ -27,7 +27,7 @@ The "~" character in the tables below is used to indicate...
 
 The full table can be downloaded [here](./res/hardware_summary_cheaha.csv).
 
-### Details
+## Details
 
 Detailed hardware information, including processor and GPU makes and models, core clock frequencies, and other information for current hardware are in the table below.
 
@@ -39,7 +39,7 @@ The table below is a theoretical analysis of FLOPS (floating point operations pe
 
 {{ read_csv('cheaha/res/flops_hpc.csv', keep_default_na=False, header=[0,1]) }}
 
-### Active Hardware Details
+## Active Hardware Details
 
 Detailed hardware information for active hardware only is in the table below.
 
@@ -49,7 +49,7 @@ The full table can be downloaded [here](./res/flops_hpc.csv).
 
 For information on using Cheaha, see our dedicated [section](./getting_started.md).
 
-## Cloud Service at cloud.rc
+# Cloud Service at cloud.rc
 
 The Cloud service hardware consists of 5 Intel nodes and 4 DGX-A100 nodes. A description of the available hardware are summarized in the following table.
 
@@ -65,7 +65,7 @@ The full table can be downloaded [here](./res/flops_cloud.csv).
 
 For information on using our Cloud service at cloud.rc, see our dedicated [section](../uab_cloud/index.md).
 
-## Kubernetes Container Service
+# Kubernetes Container Service
 
 <!-- markdownlint-disable MD046 -->
 !!! important
