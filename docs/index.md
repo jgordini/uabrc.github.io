@@ -5,8 +5,10 @@ The Research Computing System (RCS) provides a framework for sharing research da
 - _Data Analysis_: using the High Performance Computing (HPC) fabric [Cheaha](cheaha/getting_started.md) for batch data processing.
 - _Data Sharing_: supporting trusted information exchange to spark new ideas via our [Storage](data_management/storage.md) system.
 - _Application Development_: providing virtual machines and web-hosted development tools empowering researcher via our [cloud.rc](uab_cloud/index.md) fabric.
+- _Changelog_: View the history of major improvements made to the cluster. [Changelog](changelog.md)
 
 <!-- markdownlint-disable MD046 -->
+
 !!! announcement
 
     We have released new A100 gpus on Cheaha! For more information please see [GPUs](cheaha/slurm/gpu.md).
@@ -14,6 +16,7 @@ The Research Computing System (RCS) provides a framework for sharing research da
     We have released new CUDA and cuDNN modules! For more information please see [CUDA Modules](cheaha/slurm/gpu.md#cuda-modules).
 
     Also see our [A100 GPU Frequently Asked Questions (FAQ)](cheaha/slurm/gpu.md#frequently-asked-questions-faq-about-a100-gpus)
+
 <!-- markdownlint-enable MD046 -->
 
 ## How to Contact Us
@@ -23,10 +26,10 @@ Please reach out to us via email at <support@listserv.uab.edu> to create a suppo
 For face-to-face support please visit us in our Zoom office hours held weekly:
 
 - Mondays 10:00 AM to 12:00 PM:
-[Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
+  [Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
 
 - Thursdays 10:00 AM to 12:00 PM:
-[Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
+  [Zoom](https://uab.zoom.us/j/81783104592?pwd=L21OOWNlY2doWXova3MzOGFRcE4zQT09)
 
 For additional information please see [Support](./help/support.md).
 
