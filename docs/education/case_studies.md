@@ -20,9 +20,11 @@ A license is no longer required to use Clara Parabricks 4.x and later versions, 
 2. Any GPU that supports CUDA architecture/compute capability 7.0, 7.5, 8.0, 8.6, 8.9 or 9.0 and has 16 GB of GPU RAM or more. It has been tested on NVIDIA V100, NVIDIA A100, and NVIDIA T4 GPUs. For more information on Cheaha GPUs, please see our [GPU Page](../cheaha/slurm/gpu.md)
 
 <!-- markdownlint-disable MD046 -->
+
 !!! Note
 
 The P100 GPUs on Cheaha appear to work with Parabricks 4.0.0, based on our testing, despite having compute capability 6.0. This usage is not officially supported by NVIDIA.
+
 <!-- markdownlint-enable MD046 -->
 
 #### System Requirements
@@ -37,7 +39,7 @@ Parabricks software can be installed and used in the Cheaha platform on `pascaln
 
 ### Parabricks 4.x Installation on Cheaha
 
-Parbaricks 4.x are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks 4.0.0 documentation is available [here](https://docs.nvidia.com/clara/parabricks/4.0.0/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/4.0.0/toolreference.html). It also has containers for specific tool category.
+Parabricks 4.0.1-1 are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks 4.0.1-1 documentation is available [here](https://docs.nvidia.com/clara/parabricks/4.0.1-1/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/4.0.1-1/toolreference.html). It also has containers for specific tool category.
 
 Parabricks 4.x container image can be installed on Cheaha using a Singularity container. More details on usage of Singularity container on Cheaha can be found in the [Containers Page](../workflow_solutions/getting_containers.md).
 
@@ -47,7 +49,7 @@ To install Parabricks using Singulairty, load the `Singularity 3.x` module from 
 module load Singularity/3.5.2-GCC-5.4.0-2.26
 ```
 
-Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity.  The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.0.1-1. The container image name `parabricks.sif` is an user-derived name.
+Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity. The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.0.1-1. The container image name `parabricks.sif` is an user-derived name.
 
 ![!Parabricks container.](./images/parabricks_container.png)
 
@@ -96,7 +98,7 @@ Once the sample data is downloaded, you can execute the pipeline using the execu
 You will have to load the CUDA toolkit to access GPUs as below.
 
 ```bash
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 ```
 
 In the below script, the `--nv` option enables the use of NVIDIA GPUs within the container. The `-B` option is to bind the directories of the host environment and use it within the container. Here the CUDA lib path `/cm/local/apps/cuda/libs/current/lib64` is binded to use within the container. The singualrity container `parabricks.sif` is executed using the command `singualrity run` over the executable `/bin/pbrun`.
@@ -109,7 +111,7 @@ SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH singularity run --nv \
 --out-bam output.bam
 ```
 
-You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` partition. Maximum number of GPUs you can request in `amperenodes` partition to run Parabricks is 2, and that of `pascalnodes` is 4.  Here is a sample job script to run Parabricks on `amperenodes` partition on 2 GPUs.
+You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` partition. Maximum number of GPUs you can request in `amperenodes` partition to run Parabricks is 2, and that of `pascalnodes` is 4. Here is a sample job script to run Parabricks on `amperenodes` partition on 2 GPUs.
 
 ```bash
 #!/bin/bash
@@ -125,7 +127,7 @@ You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` parti
 
 #Load the Singularity and CUDA Toolkit modules
 module load Singularity/3.5.2-GCC-5.4.0-2.26
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 
 #Run the "pbrun" executable from the singularity image "parabrikcs.sif", and pass the CUDA lib path to make it accessible within the container
 SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH singularity run --nv \
@@ -158,7 +160,7 @@ ssh GPU_node
 ```
 
 ```bash
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 nvidia-smi
 ```
 
