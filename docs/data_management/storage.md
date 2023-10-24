@@ -138,6 +138,7 @@ If you are using `amperenodes` and the A100 GPUs, then it is highly recommended 
 Be sure to clean up `/local/$SLURM_JOB_ID` after your job is complete! An example script to automate this process is shown below.
 
 ```bash
+```
 #!/bin/bash
 #SBATCH ...
 
