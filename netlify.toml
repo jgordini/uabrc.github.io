@@ -1,9 +1,7 @@
 [build]
-  command = "pip install mkdocs && mkdocs gh-deploy"
+  command = "pip install mkdocs mkdocs-material && pip install lightgallery && pip install table-reader && mkdocs build"
   publish = "your_publish_directory_here"
 
 [context.production]
-  command = "pip install mkdocs && mkdocs gh-deploy"
-
-# You can add additional settings based on different contexts like deploy previews, branch deploys, etc.
+  command = "pip install mkdocs mkdocs-material && pip install lightgallery && pip install table-reader && mkdocs build"
 
