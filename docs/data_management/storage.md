@@ -1,6 +1,6 @@
 # Storage
 
-## What Type of Storage Do I Need?
+## What Type of Storage Do I Need
 
 There are multiple locations for data storage both on and off Cheaha each with a specific purpose. You can look at the table below to help determine the storage platform we provide that best matches your needed use-case. If you need additional assistance, please contact [Support](../help/support.md).
 
@@ -16,23 +16,23 @@ Individual allocations on Long-Term Storage (LTS) are also available upon reques
 
 To request individual Long-Term Storage, please first read and understand how [Long-Term Storage](./lts/index.md) differs from traditional filesystems, like GPFS on Cheaha. Decide if it is suitable for your needs. Then please feel free to contact [Support](../help/support.md).
 
-## What Shared Storage Solutions are Available?
+### What Shared Storage Solutions are Available?
 
 Shared Storage is available via two services. We have Project Storage (located in `/data/project` or Cheaha) and [Long-Term Storage (LTS)](./lts/index.md). The two offerings are suited to different sets of use-cases, so please read on to determine which may be most suitable.
 
 Project Storage is best-suited for changing or dynamic data. Specifically:
 
-- Data needing/undergoing analysis
-- Exploratory data
-- Temporary data needed longer than 30 days
+        - Data needing/undergoing analysis
+        - Exploratory data
+        - Temporary data needed longer than 30 days
 
 In contrast, [Long-Term Storage](./lts/index.md) is best-suited for unchanging or static data. Specifically:
 
-- Instrument-acquired data
-- Completed analyses
-- Hosting data for others to copy
-- Hosting data for the public internet
-- "Pick-up" and "drop-off" locations for data as part of a workflow
+    - Instrument-acquired data
+    - Completed analyses
+    - Hosting data for others to copy
+    - Hosting data for the public internet
+    - "Pick-up" and "drop-off" locations for data as part of a workflow
 
 Shared Storage is available for labs headed by a PI _and_ for Core facilities headed by a director.
 
@@ -42,15 +42,15 @@ Shared Storage is allocated on a per-organization basis, not on a per-person bas
 
 To request shared Project Storage or Long-Term Storage, please contact [Support](../help/support.md). To ensure prompt allocation of Shared Storage, please follow the guidelines below.
 
-- Requests must be made to <support@listserv.uab.edu> or via the [AskIT HelpDesk](https://www.uab.edu/it/home/).
-- Requests must come from one of the proposed owners.
-- All proposed owners must have created their [Research Computing accounts](../account_management/cheaha_account.md) at the time the request is made.
+    - Requests must be made to <support@listserv.uab.edu> or via the [AskIT HelpDesk](https://www.uab.edu/it/home/).
+    - Requests must come from one of the proposed owners.
+    - All proposed owners must have created their [Research Computing accounts](../account_management/cheaha_account.md) at the time the request is made.
 
 Please provide the following information. Missing information can delay allocation of Shared Storage as we either look up the information, or ask followup questions.
 
 - **Responsible Party/Owner:** The BlazerID of the person claiming reponsibility for what happens and what is stored in the space. Typically this would be a Principal Investigator (PI) or a Core Director.
-    - Multiple responsible parties are allowed.
-    - We need one person declared as "primary" owner. This person will be the literal owner (in the Linux sense) for Project Storage.
+        - Multiple responsible parties are allowed.
+        - We need one person declared as "primary" owner. This person will be the literal owner (in the Linux sense) for Project Storage.
 - **Members:** A list of BlazerIDs of people to give access to the space. (Note: this only applies to Project Storage. LTS access controls are managed differently.)
 - **Type of Organization:** Is the Shared Storage request for a lab, core, campus administrative group, or something else?
 - **Name of Organization:** The _specific_ name of the organization the Shared Storage request is for.
@@ -140,6 +140,7 @@ Be sure to clean up `/local/$SLURM_JOB_ID` after your job is complete! An exampl
 ```bash
 #!/bin/bash
 #SBATCH ...
+```
 
 # LOAD MODULES
 # module load ...
@@ -191,7 +192,7 @@ Software known to use `tmp` by default with no know workaround.
 
 - [Keras](https://github.com/tensorflow/tensorflow/blob/5bb81b7b0dd140a4304b92530614502c0c61a150/tensorflow/python/keras/utils/data_utils.py#L205) has `/tmp/.keras` hardcoded as a fallback cache directory if `~/.keras` is inaccessible. See [here](https://github.com/tensorflow/tensorflow/issues/38831) for a discussion of the issue.
 
-## How much space do I have left?
+## How much space do I have left
 
 - **Individual Storage**: use the command `quota-report` to see usage in `/data/user/$USER` and `/scratch/$USER`.
 - **Project Storage**: use the command `proj-quota-report <project>`. Replace `<project>` with the appropriate project directory name, i.e., `/data/project/<project>`. Be sure to _not_ use a trailing slash. Use `proj-quota-report mylab` not `proj-quota-report mylab/`.
@@ -277,5 +278,11 @@ Managing PHI data can be challenging. There are experts on Campus who can provid
 
 Data stored in `/scratch` is subject to two limited retention policies.
 
-- Each user will have a quota of 50 TB of scratch storage.
-- Files will be retained for a maximum of 30 days.
+    - Each user will have a quota of 50 TB of scratch storage.
+    - Files will be retained for a maximum of 30 days.
+
+## Accessing Data of Personnel Who Have Left UAB
+
+If you need to access the data of personnel who have left UAB, a service request form is available [here](https://uabprod.service-now.com/service_portal?id=sc_cat_item&sys_id=bd3721e2374c27c0daa253b543990e5d). Please note that this is not a Research Computing function. As part of the response to the "justification/description" box in the form, make sure to note that the request is for data held on RC systems.
+
+This form can be avoided if written approval can be provided directly from the person in question. To avoid needing this form in the future, we highly recommend setting up a data management plan. Part of this plan would be storing important and critical research data only in shared storage areas accessible to or owned by the PI responsible and integrating research data held in personal storage as part of personnel "off-boarding".

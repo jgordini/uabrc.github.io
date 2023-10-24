@@ -15,6 +15,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - assets/custom.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -26,9 +27,6 @@ copyright: Copyright &copy; 2021-2022 The University of Alabama at Birmingham.<b
 markdown_extensions:
   - admonition
   - attr_list
-  - lightgallery:
-      show_description_in_lightgallery: true
-      show_description_as_inline_caption: false
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
@@ -42,8 +40,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - table-reader:
-      data_path: docs
   - git-revision-date-localized:
       type: date
   - redirects:
