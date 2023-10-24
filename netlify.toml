@@ -1,7 +1,7 @@
 [build]
-  command = "pip install mkdocs mkdocs-material && pip install lightgallery && pip install table-reader && mkdocs build"
-  publish = "your_publish_directory_here"
+  command = "pip install mkdocs mkdocs-material && pip install lightgallery && mkdocs build"
+  publish = "\"
 
 [context.production]
-  command = "pip install mkdocs mkdocs-material && pip install lightgallery && pip install table-reader && mkdocs build"
+  command = "pip install mkdocs mkdocs-material && pip install lightgallery && mkdocs build"
 
