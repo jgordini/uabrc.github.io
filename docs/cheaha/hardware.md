@@ -14,13 +14,9 @@ The "~" character in the tables below is used to indicate...
 
 # Cheaha HPC Cluster
 
-### Summary
+## Summary
 
-The table below contains a summary of the computational resources available on Cheaha and relevant Quality of Service (QoS) Limits. QoS limits allow us to balance usage and ensure fairness for all researchers using the cluster. QoS limits are not a guarantee of resource availability.
-
-In the table, [Slurm](./slurm/introduction.md) partitions are grouped by shared QoS limits on cores, memory, and GPUs. Node limits are applied to partitions independently. All limits are applied to researchers independently.
-
-Examples of how to make use of the table:
+### Examples of how to make use of the table:
 
 - Suppose you submit 30 jobs to the "express" partition, and suppose each job needs 10 cores each. Hypothetically, in order for all of the jobs to start at once, 300 cores would be required. The QoS limit on cores is 264 on the "express" partition, so at most 26 jobs (260 cores) can start at once. The remaining 4 jobs will be held in queue, because starting one more would go beyond the QoS limit (270 > 264).
 - Suppose you submit 5 jobs to the "medium" partition and 5 to the "long" partition, each requiring 1 node. Then, 10 total nodes would be needed. In this case, it is possible that all 10 jobs can start at once because partition node limits are separate. If all 5 jobs start, jobs on the "medium" partition.
