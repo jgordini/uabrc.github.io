@@ -1,0 +1,9 @@
+[build]
+  command = "pip install mkdocs && mkdocs gh-deploy"
+  publish = "your_publish_directory_here"
+
+[context.production]
+  command = "pip install mkdocs && mkdocs gh-deploy"
+
+# You can add additional settings based on different contexts like deploy previews, branch deploys, etc.
+
