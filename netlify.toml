@@ -1,6 +1,6 @@
 [build]
   command = "pip install mkdocs mkdocs-material && mkdocs build"
-  publish = "\"
+  publish = "/"
 
 [context.production]
   command = "pip install mkdocs mkdocs-material && mkdocs build"
