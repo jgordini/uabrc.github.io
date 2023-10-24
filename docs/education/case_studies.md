@@ -39,7 +39,7 @@ Parabricks software can be installed and used in the Cheaha platform on `pascaln
 
 ### Parabricks 4.x Installation on Cheaha
 
-Parabricks latest_version are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks latest_version documentation is available [here](https://docs.nvidia.com/clara/parabricks/latest_version/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/latest_version/toolreference.html). It also has containers for specific tool category.
+Parabricks 4.0.1-1 are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks 4.0.1-1 documentation is available [here](https://docs.nvidia.com/clara/parabricks/4.0.1-1/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/4.0.1-1/toolreference.html). It also has containers for specific tool category.
 
 Parabricks 4.x container image can be installed on Cheaha using a Singularity container. More details on usage of Singularity container on Cheaha can be found in the [Containers Page](../workflow_solutions/getting_containers.md).
 
