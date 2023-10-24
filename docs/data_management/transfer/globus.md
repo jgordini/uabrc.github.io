@@ -34,21 +34,10 @@ To manage your identities, navigate to <https://app.globus.org/account/identitie
 
 1. Log in to the Globus App online at <https://app.globus.org> using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
 2. Click File Manager in the left-hand navigation pane.
-
-    ![!Navigation pane with File Manager selected.](./images/globus_002_nav_pane_file_manager.png)
-
-3. Ensure the center icon for the "Panels" selection is picked.
-
-    ![!Panels selection widget with center icon selected. Center icon appears to be two side-by-side panes.](./images/globus_003_panels.png)
-
-4. Click the "Search" icon in the "Collection" text box near the top-left or top-right of the page to locate an endpoint. There are multiple ways to find an endpoint. For some endpoints you may be asked to log in, which is true of all UAB endpoints. Some UAB endpoints may also require that you be on the UAB Campus VPN.
-
-    ![!Globus File Manager interface with mouse pointer over left-hand Collection Search box.](./images/globus_004_search_bar.png)
-
-    1. Begin typing in the box to search for an endpoint. To find UAB-related endpoints, search for "UAB". There are two Cheaha endpoints
+1. Begin typing in the box to search for an endpoint. To find UAB-related endpoints, search for "UAB". There are two Cheaha endpoints
         1. Cheaha cluster on-campus (UAB Science DMZ) for machines that are either on the UAB Campus Network, or connected to the UAB Campus VPN.
         2. Cheaha cluster off-campus (UAB Science DMZ) for machines that are _not_ on the UAB Campus Network and _not_ on the UAB Campus VPN.
-    2. The "Recent" tab shows endpoints that have most recently been used.
+2. The "Recent" tab shows endpoints that have most recently been used.
 
         ![!Globus Collection Search Recent tab showing two endpoints.](./images/globus_005_recent_tab.png)
 
@@ -103,9 +92,6 @@ Between the two "Start" buttons on the "File Manager" page is a "Transfer & Sync
 5. encrypt transfer - Encrypts data before leaving source and decrypts after arriving at destination. Recommended for all transfers, required and enforced for all UAB endpoints.
 6. skip files - Skips source files that cause errors during the transfer. Otherwise the entire transfer will stop when an error is encountered.
 7. quota fail - Fails instead of retries when the target storage quota is exceeded.
-
-### Common Errors
-
 1. File Not Found - This may mean that a file was not readable by Globus. Check that the file hasn't moved or changed names during the transfer. It is recommended to not modify files while they are being transferred by Globus.
 2. Permission Denied - Globus is not able to access the files because permissions do not allow it. For Globus Connect Personal, be sure the containing folder is on the "Accessible Folders" list. Be sure that your Cheaha account has access to read the file.
 
@@ -230,39 +216,12 @@ It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this i
     2. Give a short but memorable name for your shared collection. This information will be useful for your collaborators.
     3. Optionally fill in a more detailed description of the shared collection for your records.
     4. Optionally fill in searchable keywords.
-
-7. Click "Create Share" to move to the next step. You will be taken to the page for the newly created collection, which is now a full-fledged endpoint. Any further references to "an endpoint" will be about the newly created, shared collection.
-
-8. Make sure you are on the "Permissions" tab. You should see a permissions table with your name in the first row.
-
-    ![!Newly created test endpoint page with Permissions tab selected.](./images/globus_103_shared_permissions.png)
-
-9. Click "Add Permissions -- Share With" to share your endpoint with other users.
-
-10. Fill out the form.
-
-    ![!Test endpoint Add Permissions Share With form.](./images/globus_104_shared_add_permissions.png)
-
     1. Optionally enter a path within the shared endpoint or use the Browse button. If you leave the path as just a slash, the entire shared endpoint will be shared with these users.
     2. Select who to share with.
         1. User - One or more users.
         2. Group - All members of a group.
         3. All Users - All globus users.
-
-            <!-- markdownlint-disable MD046 -->
-            !!! danger
-
-                This will expose information to everyone on Globus!
-            <!-- markdownlint-disable MD046 -->
-
     3. Search for users to add, or a group, depending on your choice above. You should be able to find any globus user using the search box.
-
-        <!-- markdownlint-disable MD046 -->
-        !!! warning
-
-            Be certain of which user you are selecting! Check the email address domain.
-        <!-- markdownlint-disable MD046 -->
-
     4. If adding users, optionally enter a message so they know why they are being added.
     5. Select permissions. Read is automatically selected and cannot be changed. Write permissions are optional.
 
