@@ -37,7 +37,7 @@ Parabricks software can be installed and used in the Cheaha platform on `pascaln
 
 ### Parabricks 4.x Installation on Cheaha
 
-Parbaricks 4.x are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks 4.0.0 documentation is available [here](https://docs.nvidia.com/clara/parabricks/4.0.0/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/4.0.0/toolreference.html). It also has containers for specific tool category.
+Parabricks latest_version are available as containers in the [NGC Catalog](https://catalog.ngc.nvidia.com/orgs/nvidia/collections/claraparabricks/entities), and Parabricks latest_version documentation is available [here](https://docs.nvidia.com/clara/parabricks/latest_version/index.html). It has generic container that comprises all the analyses pipeline that are referred in the [Nvidia Documentation](https://docs.nvidia.com/clara/parabricks/latest_version/toolreference.html). It also has containers for specific tool category.
 
 Parabricks 4.x container image can be installed on Cheaha using a Singularity container. More details on usage of Singularity container on Cheaha can be found in the [Containers Page](../workflow_solutions/getting_containers.md).
 
@@ -96,7 +96,7 @@ Once the sample data is downloaded, you can execute the pipeline using the execu
 You will have to load the CUDA toolkit to access GPUs as below.
 
 ```bash
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 ```
 
 In the below script, the `--nv` option enables the use of NVIDIA GPUs within the container. The `-B` option is to bind the directories of the host environment and use it within the container. Here the CUDA lib path `/cm/local/apps/cuda/libs/current/lib64` is binded to use within the container. The singualrity container `parabricks.sif` is executed using the command `singualrity run` over the executable `/bin/pbrun`.
@@ -125,7 +125,7 @@ You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` parti
 
 #Load the Singularity and CUDA Toolkit modules
 module load Singularity/3.5.2-GCC-5.4.0-2.26
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 
 #Run the "pbrun" executable from the singularity image "parabrikcs.sif", and pass the CUDA lib path to make it accessible within the container
 SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH singularity run --nv \
@@ -158,7 +158,7 @@ ssh GPU_node
 ```
 
 ```bash
-module load cuda11.4/toolkit/11.4.2
+module load CUDA/11.6.0
 nvidia-smi
 ```
 
