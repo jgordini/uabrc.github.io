@@ -125,6 +125,30 @@ An example of the output is shown below. The most useful columns for us are `Loc
 
 ![!example of ss listener verification](images/port-check-ss-lnptu.png)
 
+## What is my best solution for installing Anaconda?
+
+If you are using a local machine or doing general purpose software development, or have a particular package in mind, go [here](#installing-anaconda) to install Anaconda.
+
+If you are using a virtual machine or container, go [here](#installing-miniconda) to install Miniconda.
+
+If you are using Cheaha, go [here](../cheaha/software/software.md#anaconda-on-cheaha) for how to use Anaconda on Cheaha.
+
+### Installing Anaconda
+
+The full Anaconda install is a good choice if you are using a local machine, or doing general Python development work, or have a particular scientific package in mind.
+
+Anaconda installation instructions are located here: <https://docs.anaconda.com/anaconda/install/index.html>.
+
+For best performance, be sure to set the default solver to `libmamba` using `conda config --set solver libmamba`. For more information see: <https://conda.github.io/conda-libmamba-solver/getting-started/#set-as-default>.
+
+### Installing Miniconda
+
+Miniconda is a lightweight version of Anaconda. While Anaconda's base environment comes with Python, the Scipy stack, and other common packages pre-installed, Miniconda comes with no packages installed. This is an excellent alternative to the full Anaconda installation for environments where minimal space is available or where setup time is important, like [virtual machines](../uab_cloud/index.md) and [containers](getting_containers.md).
+
+Miniconda installation instructions are located here: <https://docs.conda.io/en/latest/miniconda.html>.
+
+For best performance, be sure to set the default solver to `libmamba` using `conda config --set solver libmamba`. For more information see: <https://conda.github.io/conda-libmamba-solver/getting-started/#set-as-default>.
+
 ### Common Examples
 
 Below are a few examples of installing certain common softwares that may be useful to scientific applications. We are not able to provide diagnostic or troubleshooting support for installation of any software. If you believe these instructions are outdated or in error, please [reach out and let us know](../contributing/reporting_errors.md#how-do-i-report-inaccurate-information).
@@ -137,19 +161,7 @@ Below are a few examples of installing certain common softwares that may be usef
 4. Find the line with "recommended" and install the package on that line with `sudo apt install nvidia-driver-###`
 5. Reboot the instance
 
-#### Installing Miniconda
-
-We recommend installing [Miniconda](https://docs.conda.io/en/latest/miniconda.html) on cloud.rc instances, as opposed to Anaconda, to conserve storage space.
-
-1. Run the commands in [Before Installing Software](#before-installing-software).
-2. `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
-3. `bash Miniconda3-latest-Linux-x86_64.sh`
-
-<!-- markdownlint-disable MD046 -->
-!!! tip
-
-    Consider installing [Mamba](../workflow_solutions/using_anaconda.md#mamba) to speed up environment installation.
-<!-- markdownlint-enable MD046 -->
+For detailed instructions on installing Miniconda, refer to the [Installing Miniconda](#installing-miniconda) section above.
 
 #### Installing Singularity
 
