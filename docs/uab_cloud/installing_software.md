@@ -55,8 +55,8 @@ If you intend to use your instance as a server host, you'll likely need to set u
 1. Set up [Security Groups](tutorial/security.md#creating-a-security-group) for the ports your server will need to communicate on.
 2. [SSH](./tutorial/instances.md#ssh-into-the-instance) into the instance.
 3. Prepare the `netcat` software command `nc`:
-   - For Ubuntu, the command `nc` should already be available.
-   - For other OSes, you may need to [Install](./installing_software.md) `nc` or `netcat`.
+ - For Ubuntu, the command `nc` should already be available.
+ - For other OSes, you may need to [Install](./installing_software.md) `nc` or `netcat`.
 4. For one of your `<port>` of interest, start a TCP listener with `nc -l <port>`.
 
     <!-- markdownlint-disable MD046 -->
@@ -237,14 +237,14 @@ Once the prerequisites are complete, the following steps must be performed to in
 
 1. [Install](../workflow_solutions/using_anaconda.md#install-packages) Jupyter Notebook Server using [Miniconda](../workflow_solutions/using_anaconda.md). You will need the following packages.
 
-    - `conda-forge` channel
-        - `notebook`
-        - `nb_conda_kernels`
-        - [Optional] `jupyter_contrib_nbextensions`
-    - `anaconda` channel
-        - `ipykernel` for python users
-        - `r-irkernel` for R users
-        - [Optional] `pip`
+ - `conda-forge` channel
+   - `notebook`
+   - `nb_conda_kernels`
+   - [Optional] `jupyter_contrib_nbextensions`
+ - `anaconda` channel
+   - `ipykernel` for python users
+   - `r-irkernel` for R users
+   - [Optional] `pip`
 
 2. Because floating IPs are, by default, reachable by anyone on the campus network, you'll need to secure the server using the steps below.
     1. Generate a notebook config file using `jupyter notebook --generate-config`. [[official docs](https://jupyter-notebook.readthedocs.io/en/stable/public_server.html#prerequisite-a-notebook-configuration-file)]
