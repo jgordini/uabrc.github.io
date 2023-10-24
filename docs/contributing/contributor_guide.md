@@ -60,7 +60,7 @@ To make the best use of formatting extensions for this project, please add the f
 
 Before you can get started working on contributions, you'll need a copy of the repository. The first step, done only once, is to fork the repository in GitHub to your personal account. The repository is located at <https://github.com/uabrc/uabrc.github.io>. More in-depth documentation on forking can be found at [GitHub: Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
-Once the fork has been created, you can clone your fork using the Command Palette (++ctrl+shift+p++) and `Git: Clone...` in VSCode, or at the command line. More information on cloning can be found at [GitHub: Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). More information on using git can be found at our [git page](../workflow_solutions/getting_software_with_git.md).
+Once the fork has been created, you can clone your fork using the Command Palette (++ctrl+shift+p++) and `Git: Clone...` in VSCode, or at the command line. More information on cloning can be found at [GitHub: Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). More information on using git can be found at our [git page](../workflow_solutions/git_collaboration.md).
 
 ### Local Machine Setup (Laptop/Desktop)
 
@@ -190,7 +190,7 @@ Reviewing a pull request means obtaining a copy of the pull request branch and [
 - Favor placing new pages and information into an existing section over creating
 - Approach documentation from a problem solving angle rather than a technology. Examples:
     - Section title "Installing Software Yourself with Anaconda" vs "Anaconda"
-    - Section title "Running Analysis Jobs" vs "SLURM"
+    - Section title "Running Analysis Jobs" vs "Slurm"
 - Put redirects for any page moves in case someone has bookmarked a page (see Redirect section below)
 
 ## Markdown Formatting
