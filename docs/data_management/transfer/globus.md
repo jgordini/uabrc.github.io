@@ -143,6 +143,18 @@ To use the UAB Box Connector, [search for an endpoint](#moving-data-between-endp
 
 To use the UAB [LTS](../lts/index.md) Connector, [search for an endpoint](#moving-data-between-endpoints) like usual and enter "UAB LTS" into the search box. Select the endpoint labeled "UAB Research Computing LTS (Long Term Storage aka S3)". If you have stored data within LTS already you should see a list of folders, otherwise you will see an empty space where folders may be placed. Each folder corresponds to a [bucket](../lts/interfaces.md#make-a-bucket) in LTS. To create a bucket, click "New Folder" in the "File Manager" window in Globus. Note that buckets must have globally unique names. Read on for more information about possible pitfalls.
 
+### Updating AWS IAM Credentials in Globus for LTS
+
+1. Navigate to [app.globus.org](https://app.globus.org/) and sign in as usual (if necessary).
+2. Click "File Manager" in the left navigation panel.
+3. Click the "Collection" search box to be taken to the collection search page.
+4. In the "Collection" box at the top of the page, type in "UAB LTS".
+5. At this time only one entry should show up called "UAB Research Computing LTS (Long Term Storage aka S3)". Click it to proceed to its page.
+6. Once at the LTS collection page, click the "Credentials" tab.
+7. You should see a page asking you to "Register a Credential". Please enter the two keys here and then press "Continue".
+8. You may instead see an existing credential. You can delete that with the trash-can icon, then try the previous step.
+9. Once done you should be returned to the "Credentials" tab and see an entry there reflecting the information you entered.
+
 #### Data Must be in Buckets
 
 All data transferred to LTS must be placed in a bucket, and may _not_ be placed directly into the root directory. Attempting to move data to the root directory will result in an unhelpful error message in the "Activity" window.
