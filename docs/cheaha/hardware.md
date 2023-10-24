@@ -12,7 +12,7 @@ The following hardware summaries may be useful for selecting partitions for work
 
 The "~" character in the tables below is used to indicate...
 
-# Cheaha HPC Cluster
+## Cheaha HPC Cluster
 
 ## Summary
 
