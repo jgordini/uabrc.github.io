@@ -55,8 +55,8 @@ If you intend to use your instance as a server host, you'll likely need to set u
 1. Set up [Security Groups](tutorial/security.md#creating-a-security-group) for the ports your server will need to communicate on.
 2. [SSH](#streamlining-ssh) into the instance.
 3. Prepare the `netcat` software command `nc`:
-    - For Ubuntu, the command `nc` should already be available.
-    - For other OSes, you may need to [Install](./installing_software.md) `nc` or `netcat`.
+   - For Ubuntu, the command `nc` should already be available.
+   - For other OSes, you may need to [Install](./installing_software.md) `nc` or `netcat`.
 4. For one of your `<port>` of interest, start a TCP listener with `nc -l <port>`.
 
     <!-- markdownlint-disable MD046 -->
