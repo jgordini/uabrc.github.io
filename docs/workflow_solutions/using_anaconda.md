@@ -26,7 +26,7 @@ Anaconda is a package manager, meaning it handles all of the difficult mathemati
 
 Anaconda is structured around environments. Environments are self-contained collections of researcher-selected packages. Environments can be changed out using a simple package without requiring tedious installing and uninstalling of packages or software, and avoiding dependency conflicts with each other. Environments allow researchers to work and collaborate on multiple projects, each with different requirements, all on the same computer. Environments can be installed from the command line, from pre-designed or shared YAML files, and can be modified or updated as needed.
 
-The following subsections detail some of the more common commands and use cases for Anaconda usage. More complete information on this process can be found at the [Anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#).
+The following subsections detail some of the more common commands and use cases for Anaconda usage. For detailed instructions on installing Anaconda, refer to the [Anaconda installation instructions](https://docs.anaconda.com/anaconda/install/index.html).
 
 <!-- markdownlint-disable MD046 -->
 
@@ -241,4 +241,4 @@ Efficient software developers live the mantra "Don't repeat yourself". Part of n
 
 Use of Mamba has been deprecated on Cheaha. On Cheaha, use `module load Anaconda3` and the usual `conda` commands instead. The backend of `conda` has been set to use `libmamba` and is now equally performant.
 
-If you are using Mamba on a local machine and have Anaconda installed, you can set `libmamba` as your default solver using `conda config --set solver libmamba` as described here: <https://conda.github.io/conda-libmamba-solver/getting-started/#set-as-default>
+If you are using Mamba on a local machine and have Anaconda installed, you can set `libmamba` as your default solver using `conda config --set solver libmamba`. For detailed instructions on installing Miniconda, refer to the [Miniconda installation instructions](https://docs.conda.io/en/latest/miniconda.html).
