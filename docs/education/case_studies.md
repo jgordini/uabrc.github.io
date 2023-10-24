@@ -20,9 +20,11 @@ A license is no longer required to use Clara Parabricks 4.x and later versions, 
 2. Any GPU that supports CUDA architecture/compute capability 7.0, 7.5, 8.0, 8.6, 8.9 or 9.0 and has 16 GB of GPU RAM or more. It has been tested on NVIDIA V100, NVIDIA A100, and NVIDIA T4 GPUs. For more information on Cheaha GPUs, please see our [GPU Page](../cheaha/slurm/gpu.md)
 
 <!-- markdownlint-disable MD046 -->
+
 !!! Note
 
 The P100 GPUs on Cheaha appear to work with Parabricks 4.0.0, based on our testing, despite having compute capability 6.0. This usage is not officially supported by NVIDIA.
+
 <!-- markdownlint-enable MD046 -->
 
 #### System Requirements
@@ -47,7 +49,7 @@ To install Parabricks using Singulairty, load the `Singularity 3.x` module from 
 module load Singularity/3.5.2-GCC-5.4.0-2.26
 ```
 
-Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity.  The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.0.1-1. The container image name `parabricks.sif` is an user-derived name.
+Go to the NGC catalog page and copy the image path to pull the desired containers of Parabricks using Singularity. Here, the generic container is pulled using Singularity. The image path is in “nvcr.io/nvidia/clara/clara-parabricks" and the tag is 4.0.1-1. The container image name `parabricks.sif` is an user-derived name.
 
 ![!Parabricks container.](./images/parabricks_container.png)
 
@@ -109,7 +111,7 @@ SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH singularity run --nv \
 --out-bam output.bam
 ```
 
-You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` partition. Maximum number of GPUs you can request in `amperenodes` partition to run Parabricks is 2, and that of `pascalnodes` is 4.  Here is a sample job script to run Parabricks on `amperenodes` partition on 2 GPUs.
+You can execute Parabricks on Cheaha using `amperenodes` and `pascalnodes` partition. Maximum number of GPUs you can request in `amperenodes` partition to run Parabricks is 2, and that of `pascalnodes` is 4. Here is a sample job script to run Parabricks on `amperenodes` partition on 2 GPUs.
 
 ```bash
 #!/bin/bash
