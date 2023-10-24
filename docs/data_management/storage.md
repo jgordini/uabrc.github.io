@@ -1,6 +1,6 @@
 # Storage
 
-## What Type of Storage Do I Need?
+## What Type of Storage Do I Need
 
 There are multiple locations for data storage both on and off Cheaha each with a specific purpose. You can look at the table below to help determine the storage platform we provide that best matches your needed use-case. If you need additional assistance, please contact [Support](../help/support.md).
 
@@ -49,8 +49,8 @@ To request shared Project Storage or Long-Term Storage, please contact [Support]
 Please provide the following information. Missing information can delay allocation of Shared Storage as we either look up the information, or ask followup questions.
 
 - **Responsible Party/Owner:** The BlazerID of the person claiming reponsibility for what happens and what is stored in the space. Typically this would be a Principal Investigator (PI) or a Core Director.
-    - Multiple responsible parties are allowed.
-    - We need one person declared as "primary" owner. This person will be the literal owner (in the Linux sense) for Project Storage.
+        - Multiple responsible parties are allowed.
+        - We need one person declared as "primary" owner. This person will be the literal owner (in the Linux sense) for Project Storage.
 - **Members:** A list of BlazerIDs of people to give access to the space. (Note: this only applies to Project Storage. LTS access controls are managed differently.)
 - **Type of Organization:** Is the Shared Storage request for a lab, core, campus administrative group, or something else?
 - **Name of Organization:** The _specific_ name of the organization the Shared Storage request is for.
@@ -138,9 +138,9 @@ If you are using `amperenodes` and the A100 GPUs, then it is highly recommended 
 Be sure to clean up `/local/$SLURM_JOB_ID` after your job is complete! An example script to automate this process is shown below.
 
 ```bash
-```
 #!/bin/bash
 #SBATCH ...
+```
 
 # LOAD MODULES
 # module load ...
