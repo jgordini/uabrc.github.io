@@ -1,14 +1,14 @@
 # Table of Contents
 
-- [Data Analysis](#data-analysis)
-- [Data Sharing](#data-sharing)
-- [Application Development](#application-development)
-- [Changelog](#changelog)
+- [Data Analysis](#_data-analysis_)
+- [Data Sharing](#_data-sharing_)
+- [Application Development](#_application-development_)
+- [Changelog](#_changelog_)
 - [How to Contact Us](#how-to-contact-us)
 - [Support and Development](#support-and-development)
 - [Outreach](#outreach)
 
-# Welcome to UAB Research Computing
+## Welcome to UAB Research Computing
 
 The Research Computing System (RCS) provides a framework for sharing research data, accessing computing power, and collaborating with peers on campus and around the globe. Our goal is to construct a dynamic "network of services" that you can use to organize, study and share your research data. Research Computing provides services to researchers in these core areas:
 
