@@ -279,3 +279,9 @@ Data stored in `/scratch` is subject to two limited retention policies.
 
 - Each user will have a quota of 50 TB of scratch storage.
 - Files will be retained for a maximum of 30 days.
+
+## Accessing Data of Personnel Who Have Left UAB
+
+If you need to access the data of personnel who have left UAB, a service request form is available [here](https://uabprod.service-now.com/service_portal?id=sc_cat_item&sys_id=bd3721e2374c27c0daa253b543990e5d). Please note that this is not a Research Computing function. As part of the response to the "justification/description" box in the form, make sure to note that the request is for data held on RC systems.
+
+This form can be avoided if written approval can be provided directly from the person in question. To avoid needing this form in the future, we highly recommend setting up a data management plan. Part of this plan would be storing important and critical research data only in shared storage areas accessible to or owned by the PI responsible and integrating research data held in personal storage as part of personnel "off-boarding".
