@@ -144,6 +144,7 @@ Clicking on the "view event log" link shows the following.
 ![!unhelpful event log message](images/globus_lts_no_bucket_error_002.png)
 
 ```text
+```
 Error (transfer)
 Endpoint: UAB Research Computing LTS (Long Term Storage aka S3) (184408b4-d04b-4513-9912-8feeb6adcab3)
 Server: m-a201b5.9ad93.a567.data.globus.org:443
