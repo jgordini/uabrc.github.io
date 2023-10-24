@@ -1,5 +1,5 @@
 [build]
-  command = "pip install mkdocs mkdocs-material && mkdocs build"
+  command = "pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin && mkdocs build"
   publish = "/"
 
 [context.production]
