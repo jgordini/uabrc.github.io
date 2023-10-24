@@ -42,9 +42,9 @@ Shared Storage is allocated on a per-organization basis, not on a per-person bas
 
 To request shared Project Storage or Long-Term Storage, please contact [Support](../help/support.md). To ensure prompt allocation of Shared Storage, please follow the guidelines below.
 
-- Requests must be made to <support@listserv.uab.edu> or via the [AskIT HelpDesk](https://www.uab.edu/it/home/).
-- Requests must come from one of the proposed owners.
-- All proposed owners must have created their [Research Computing accounts](../account_management/cheaha_account.md) at the time the request is made.
+  - Requests must be made to <support@listserv.uab.edu> or via the [AskIT HelpDesk](https://www.uab.edu/it/home/).
+  - Requests must come from one of the proposed owners.
+  - All proposed owners must have created their [Research Computing accounts](../account_management/cheaha_account.md) at the time the request is made.
 
 Please provide the following information. Missing information can delay allocation of Shared Storage as we either look up the information, or ask followup questions.
 
@@ -277,8 +277,8 @@ Managing PHI data can be challenging. There are experts on Campus who can provid
 
 Data stored in `/scratch` is subject to two limited retention policies.
 
-- Each user will have a quota of 50 TB of scratch storage.
-- Files will be retained for a maximum of 30 days.
+  - Each user will have a quota of 50 TB of scratch storage.
+  - Files will be retained for a maximum of 30 days.
 
 ## Accessing Data of Personnel Who Have Left UAB
 
