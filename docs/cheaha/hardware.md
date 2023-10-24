@@ -8,58 +8,64 @@ The following hardware summaries may be useful for selecting partitions for work
     The tables in this section are wide and can be scrolled horizontally to display more information.
 <!-- markdownlint-enable MD046 -->
 
-## Cheaha HPC Cluster
+### ~ Character Usage
 
-### Summary
+The "~" character in the tables below is used to indicate...
 
-The table below contains a summary of the computational resources available on Cheaha and relevant Quality of Service (QoS) Limits. QoS limits allow us to balance usage and ensure fairness for all researchers using the cluster. QoS limits are not a guarantee of resource availability.
+# Cheaha HPC Cluster
 
-In the table, [Slurm](./slurm/introduction.md) partitions are grouped by shared QoS limits on cores, memory, and GPUs. Node limits are applied to partitions independently. All limits are applied to researchers independently.
+## Summary
 
-Examples of how to make use of the table:
+### Examples of how to make use of the table
 
 - Suppose you submit 30 jobs to the "express" partition, and suppose each job needs 10 cores each. Hypothetically, in order for all of the jobs to start at once, 300 cores would be required. The QoS limit on cores is 264 on the "express" partition, so at most 26 jobs (260 cores) can start at once. The remaining 4 jobs will be held in queue, because starting one more would go beyond the QoS limit (270 > 264).
 - Suppose you submit 5 jobs to the "medium" partition and 5 to the "long" partition, each requiring 1 node. Then, 10 total nodes would be needed. In this case, it is possible that all 10 jobs can start at once because partition node limits are separate. If all 5 jobs start, jobs on the "medium" partition.
 - Suppose you submit 5 jobs to the "amperenodes" partition and 5 to "amperenodes-medium", for a total of 10 A100 GPUs. Additionally, you also submit 4 jobs to the "pascalnodes" partition totaling 8 P100 GPUs. Then 4 of the "gpu: ampere" group jobs can start at once, because the QoS limit is 4 GPUs there. Additionally, all 4 of the "gpu: pascal" group jobs, because the QoS limit is 8 GPUs there. In this case, the QoS for each group is separate.
 
-{{ read_csv('cheaha/res/hardware_summary_cheaha.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/hardware_summary_cheaha.csv', keep_default_na=False, header=[0,1]) }}
 <!-- fix headers -->
 
 The full table can be downloaded [here](./res/hardware_summary_cheaha.csv).
 
-### Details
+## Details
 
 Detailed hardware information, including processor and GPU makes and models, core clock frequencies, and other information for current hardware are in the table below.
 
-{{ read_csv('cheaha/res/hardware_full_all.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/hardware_full_all.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/hardware_full_all.csv).
 
 The table below is a theoretical analysis of FLOPS (floating point operations per second) based on processor instructions and core counts, and is not a reflection of efficiency in practice.
 
-{{ read_csv('cheaha/res/flops_hpc.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/flops_hpc.csv', keep_default_na=False, header=[0,1]) }}
+
+## Active Hardware Details
+
+Detailed hardware information for active hardware only is in the table below.
+
+{{ read_csv('cheaha/res/hardware_full_active.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/flops_hpc.csv).
 
 For information on using Cheaha, see our dedicated [section](./getting_started.md).
 
-## Cloud Service at cloud.rc
+# Cloud Service at cloud.rc
 
 The Cloud service hardware consists of 5 Intel nodes and 4 DGX-A100 nodes. A description of the available hardware are summarized in the following table.
 
-{{ read_csv('cheaha/res/hardware_short_cloud.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/hardware_short_cloud.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/hardware_short_cloud.csv).
 
 The table below is a theoretical analysis of FLOPS (floating point operations per second) based on processor instructions and core counts, and is not a reflection of efficiency in practice.
 
-{{ read_csv('cheaha/res/flops_cloud.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/flops_cloud.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/flops_cloud.csv).
 
 For information on using our Cloud service at cloud.rc, see our dedicated [section](../uab_cloud/index.md).
 
-## Kubernetes Container Service
+# Kubernetes Container Service
 
 <!-- markdownlint-disable MD046 -->
 !!! important
@@ -69,12 +75,12 @@ For information on using our Cloud service at cloud.rc, see our dedicated [secti
 
 The Kubernetes container service hardware consists of 5 Intel nodes and 4 DGX-A100 nodes. A description of the available hardware are summarized in the following table.
 
-{{ read_csv('cheaha/res/hardware_short_container.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/hardware_short_container.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/hardware_short_container.csv).
 
 The table below is a theoretical analysis of FLOPS (floating point operations per second) based on processor instructions and core counts, and is not a reflection of efficiency in practice.
 
-{{ read_csv('cheaha/res/flops_container.csv', keep_default_na=False) }}
+{{ read_csv('cheaha/res/flops_container.csv', keep_default_na=False, header=[0,1]) }}
 
 The full table can be downloaded [here](./res/flops_container.csv).
