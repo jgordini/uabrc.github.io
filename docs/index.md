@@ -1,9 +1,9 @@
 # Table of Contents
 
-- [Data Analysis](#data-analysis)
-- [Data Sharing](#data-sharing)
-- [Application Development](#application-development)
-- [Changelog](#changelog)
+- [Data Analysis](#welcome-to-uab-research-computing)
+- [Data Sharing](#how-to-contact-us)
+- [Application Development](#support-and-development)
+- [Changelog](#outreach)
 - [How to Contact Us](#how-to-contact-us)
 - [Support and Development](#support-and-development)
 - [Outreach](#outreach)
