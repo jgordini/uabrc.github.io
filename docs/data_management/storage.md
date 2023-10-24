@@ -22,17 +22,17 @@ Shared Storage is available via two services. We have Project Storage (located i
 
 Project Storage is best-suited for changing or dynamic data. Specifically:
 
-  - Data needing/undergoing analysis
-  - Exploratory data
-  - Temporary data needed longer than 30 days
+    - Data needing/undergoing analysis
+    - Exploratory data
+    - Temporary data needed longer than 30 days
 
 In contrast, [Long-Term Storage](./lts/index.md) is best-suited for unchanging or static data. Specifically:
 
-  - Instrument-acquired data
-  - Completed analyses
-  - Hosting data for others to copy
-  - Hosting data for the public internet
-  - "Pick-up" and "drop-off" locations for data as part of a workflow
+    - Instrument-acquired data
+    - Completed analyses
+    - Hosting data for others to copy
+    - Hosting data for the public internet
+    - "Pick-up" and "drop-off" locations for data as part of a workflow
 
 Shared Storage is available for labs headed by a PI _and_ for Core facilities headed by a director.
 
@@ -138,6 +138,7 @@ If you are using `amperenodes` and the A100 GPUs, then it is highly recommended 
 Be sure to clean up `/local/$SLURM_JOB_ID` after your job is complete! An example script to automate this process is shown below.
 
 ```bash
+```
 #!/bin/bash
 #SBATCH ...
 
