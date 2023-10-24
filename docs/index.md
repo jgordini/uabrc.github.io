@@ -1,9 +1,9 @@
 # Table of Contents
 
-- [Data Analysis](#_data-analysis_)
-- [Data Sharing](#_data-sharing_)
-- [Application Development](#_application-development_)
-- [Changelog](#_changelog_)
+- [Data Analysis](#data-analysis)
+- [Data Sharing](#data-sharing)
+- [Application Development](#application-development)
+- [Changelog](#changelog)
 - [How to Contact Us](#how-to-contact-us)
 - [Support and Development](#support-and-development)
 - [Outreach](#outreach)
