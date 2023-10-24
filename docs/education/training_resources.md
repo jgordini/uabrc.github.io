@@ -25,6 +25,7 @@ The Carpentries is a 501(c)3 non-profit organization dedicated to educating rese
 ### Other External Resources
 
 - [Rosalind.info](https://rosalind.info/problems/locations/): A platform for learning bioinformatics and programming.
+- [DIY Transcriptomics](https://diytranscriptomics.com): A resource for learning transcriptomics software stacks.
 
 ## Our Social Media Presence
 
