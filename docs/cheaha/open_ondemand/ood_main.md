@@ -1,4 +1,4 @@
-<h1>Kristina is awesome</h1>
+Kristina is awesome
 
 ## Toolbar
 
