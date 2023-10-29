@@ -1,10 +1,13 @@
 # Storage
 
-## What Type of Storage Do I Need
+## What Type of Storage Do I Need?
 
-There are multiple locations for data storage both on and off Cheaha each with a specific purpose. You can look at the table below to help determine the storage platform we provide that best matches your needed use-case. If you need additional assistance, please contact [Support](../help/support.md).
+There are multiple locations for data storage both on and off Cheaha, each with a specific purpose. You can look at the table below to help determine the storage platform that best matches your needed use-case. If you need additional assistance, please contact [Support](../help/support.md).
 
+```python
 read_csv('data_management/res/storage_overview.csv', keep_default_na=False)
+```bash
+```
 
 ## What Individual Storage Solutions are Available?
 
