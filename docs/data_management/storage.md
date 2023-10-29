@@ -4,7 +4,7 @@
 
 There are multiple locations for data storage both on and off Cheaha each with a specific purpose. You can look at the table below to help determine the storage platform we provide that best matches your needed use-case. If you need additional assistance, please contact [Support](../help/support.md).
 
-{{ read_csv('data_management/res/storage_overview.csv', keep_default_na=False) }}
+read_csv('data_management/res/storage_overview.csv', keep_default_na=False)
 
 ## What Individual Storage Solutions are Available?
 
@@ -88,7 +88,7 @@ Members of the project directory group have permissions to access that project d
 
 Be default, project space permissions are set up in the following way:
 
-{{ read_csv('data_management/res/project_space_permissions.csv', keep_default_na=False) }}
+read_csv('data_management/res/project_space_permissions.csv', keep_default_na=False)
 
 Having `setgid` enabled on directories means new files and directories created within will inherit group ownership and the `setgid` bit. The `setgid` bit is reflected by the `2` in the numeric permissions and the `s` in the symbolic permissions. The `setgid` bit and per-directory project groups is how Research Computing controls access to each project directory.
 
