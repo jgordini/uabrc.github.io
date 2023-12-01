@@ -1,0 +1,2696 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.6">
+    
+    
+      
+        <title>Cheaha Storage - Research Computing Documentation</title>
+      
+    
+    
+
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+<link rel="stylesheet" href="../../css/lightgallery.min.css" />
+
+    
+
+<script src="../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#storage" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Computing Documentation" class="md-header__button md-logo" aria-label="Research Computing Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Computing Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cheaha Storage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/uabrc/uabrc.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Computing Documentation" class="md-nav__button md-logo" aria-label="Research Computing Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Research Computing Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/uabrc/uabrc.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Account Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Account Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Account Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account_management/cheaha_account/" class="md-nav__link">
+        Cheaha Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../account_management/xias/">External Collaborator Accounts (XIAS)</a>
+          
+            <label for="__nav_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="External Collaborator Accounts (XIAS)" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          External Collaborator Accounts (XIAS)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account_management/xias/pi_site_management/" class="md-nav__link">
+        For PIs - (1) Managing Projects & Sites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account_management/xias/pi_guest_management/" class="md-nav__link">
+        For PIs - (2) Managing Guests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account_management/xias/guest_instructions/" class="md-nav__link">
+        For Guests - Account Creation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../account_management/gitlab_account/" class="md-nav__link">
+        Gitlab Account
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Data Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Data Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cheaha Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cheaha Storage
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-type-of-storage-do-i-need" class="md-nav__link">
+    What Type of Storage Do I Need?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-individual-storage-solutions-are-available" class="md-nav__link">
+    What Individual Storage Solutions are Available?
+  </a>
+  
+    <nav class="md-nav" aria-label="What Individual Storage Solutions are Available?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-individual-long-term-storage" class="md-nav__link">
+    How Do I Request Individual Long-Term Storage?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-shared-storage-solutions-are-available" class="md-nav__link">
+    What Shared Storage Solutions are Available?
+  </a>
+  
+    <nav class="md-nav" aria-label="What Shared Storage Solutions are Available?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-shared-storage" class="md-nav__link">
+    How Do I Request Shared Storage?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-make-changes-to-shared-storage-membership" class="md-nav__link">
+    How Do I Make Changes to Shared Storage Membership?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-directory-permissions" class="md-nav__link">
+    Project Directory Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    Scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-scratch" class="md-nav__link">
+    User Scratch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-scratch" class="md-nav__link">
+    Local Scratch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-files-tmp" class="md-nav__link">
+    Temporary Files (tmp)
+  </a>
+  
+    <nav class="md-nav" aria-label="Temporary Files (tmp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-known-to-use-tmp" class="md-nav__link">
+    Software Known to Use tmp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-much-space-do-i-have-left" class="md-nav__link">
+    How much space do I have left?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-responsibilities-and-procedures" class="md-nav__link">
+    Data Responsibilities and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Responsibilities and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archival" class="md-nav__link">
+    Archival
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    Backups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipaa-compliance" class="md-nav__link">
+    HIPAA Compliance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-retention-policy" class="md-nav__link">
+    Scratch Retention Policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../lts/">Long Term Storage</a>
+          
+            <label for="__nav_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Long Term Storage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Long Term Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lts/interfaces/" class="md-nav__link">
+        Interfacing with LTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lts/policies/" class="md-nav__link">
+        Sharing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lts/lts_faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Transfer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Transfer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Transfer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/globus/" class="md-nav__link">
+        Globus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/rclone/" class="md-nav__link">
+        RClone
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transfer/filezilla/" class="md-nav__link">
+        FileZilla
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code_storage/" class="md-nav__link">
+        Code Storage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Workflow Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Workflow Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Workflow Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/shell/" class="md-nav__link">
+        Using the Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/using_anaconda/" class="md-nav__link">
+        Using Anaconda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/using_workflow_managers/" class="md-nav__link">
+        Using Workflow Managers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/git/" class="md-nav__link">
+        Using Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/r_environments/" class="md-nav__link">
+        R Projects and Environments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/getting_containers/" class="md-nav__link">
+        Software Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow_solutions/git_collaboration/" class="md-nav__link">
+        Software Collaboration with GitHub and GitLab
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Cheaha Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cheaha Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cheaha Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/getting_started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/hardware/" class="md-nav__link">
+        Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/software/modules/" class="md-nav__link">
+        Preinstalled Modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/software/software/" class="md-nav__link">
+        Self-Installed Software
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Open OnDemand
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Open OnDemand" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Open OnDemand
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/open_ondemand/ood_main/" class="md-nav__link">
+        Homepage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/open_ondemand/ood_files/" class="md-nav__link">
+        File Browser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/open_ondemand/ood_interactive/" class="md-nav__link">
+        Interactive Apps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/open_ondemand/ood_jobs/" class="md-nav__link">
+        Job Composer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          SLURM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SLURM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          SLURM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/slurm/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/slurm/submitting_jobs/" class="md-nav__link">
+        Submitting Jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/slurm/practical_sbatch/" class="md-nav__link">
+        Practical Batch Array Jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/slurm/job_management/" class="md-nav__link">
+        Managing Jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/slurm/gpu/" class="md-nav__link">
+        GPUs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cheaha/job_efficiency/" class="md-nav__link">
+        Job Efficiency
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../uab_cloud/">UAB Cloud (cloud.rc) Guide</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="UAB Cloud (cloud.rc) Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          UAB Cloud (cloud.rc) Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../uab_cloud/tutorial/">Tutorial</a>
+          
+            <label for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/tutorial/networks/" class="md-nav__link">
+        (1) Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/tutorial/security/" class="md-nav__link">
+        (2) Security Policies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/tutorial/instances/" class="md-nav__link">
+        (3) Instances
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/tutorial/volumes/" class="md-nav__link">
+        (4) Volumes (optional)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/remote_access/" class="md-nav__link">
+        Remote Access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/installing_software/" class="md-nav__link">
+        Installing Software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uab_cloud/snapshots/" class="md-nav__link">
+        Snapshots and Images
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          UAB Kubernetes Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="UAB Kubernetes Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          UAB Kubernetes Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/startup/" class="md-nav__link">
+        Startup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../national_ci/">National Research Computing Cyberinfrastructure</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="National Research Computing Cyberinfrastructure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          National Research Computing Cyberinfrastructure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../national_ci/osg/" class="md-nav__link">
+        The Open Science Grid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../national_ci/nsf_access/" class="md-nav__link">
+        NSF Cyberinfrastructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../national_ci/nih/" class="md-nav__link">
+        NIH Cyberinfrastructure
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Grants & Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Grants & Contracts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Grants & Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grants/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grants/facilities/" class="md-nav__link">
+        Facilities and Plan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grants/budgets/" class="md-nav__link">
+        Budgeting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grants/publications/" class="md-nav__link">
+        Descriptions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Outreach & Training
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Outreach & Training" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Outreach & Training
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/case_studies/" class="md-nav__link">
+        Case Studies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/research_computing_days/" class="md-nav__link">
+        Research Computing Days
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/courses/" class="md-nav__link">
+        Offered Courses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../education/training_resources/" class="md-nav__link">
+        Training Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/" class="md-nav__link">
+        Policies
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/reporting_errors/" class="md-nav__link">
+        Reporting Documentation Errors
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contributor_guide/" class="md-nav__link">
+        Contributing Content
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_14">
+          Help
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Help" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          Help
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-type-of-storage-do-i-need" class="md-nav__link">
+    What Type of Storage Do I Need?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-individual-storage-solutions-are-available" class="md-nav__link">
+    What Individual Storage Solutions are Available?
+  </a>
+  
+    <nav class="md-nav" aria-label="What Individual Storage Solutions are Available?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-individual-long-term-storage" class="md-nav__link">
+    How Do I Request Individual Long-Term Storage?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-shared-storage-solutions-are-available" class="md-nav__link">
+    What Shared Storage Solutions are Available?
+  </a>
+  
+    <nav class="md-nav" aria-label="What Shared Storage Solutions are Available?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-shared-storage" class="md-nav__link">
+    How Do I Request Shared Storage?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-make-changes-to-shared-storage-membership" class="md-nav__link">
+    How Do I Make Changes to Shared Storage Membership?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-directory-permissions" class="md-nav__link">
+    Project Directory Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    Scratch
+  </a>
+  
+    <nav class="md-nav" aria-label="Scratch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-scratch" class="md-nav__link">
+    User Scratch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-scratch" class="md-nav__link">
+    Local Scratch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-files-tmp" class="md-nav__link">
+    Temporary Files (tmp)
+  </a>
+  
+    <nav class="md-nav" aria-label="Temporary Files (tmp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-known-to-use-tmp" class="md-nav__link">
+    Software Known to Use tmp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-much-space-do-i-have-left" class="md-nav__link">
+    How much space do I have left?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-responsibilities-and-procedures" class="md-nav__link">
+    Data Responsibilities and Procedures
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Responsibilities and Procedures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archival" class="md-nav__link">
+    Archival
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backups" class="md-nav__link">
+    Backups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hipaa-compliance" class="md-nav__link">
+    HIPAA Compliance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch-retention-policy" class="md-nav__link">
+    Scratch Retention Policy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/uabrc/uabrc.github.io/edit/main/docs/data_management/storage.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h1>
+<h2 id="what-type-of-storage-do-i-need">What Type of Storage Do I Need?<a class="headerlink" href="#what-type-of-storage-do-i-need" title="Permanent link">&para;</a></h2>
+<p>There are multiple locations for data storage both on and off Cheaha each with a specific purpose. You can look at the table below to help determine the storage platform we provide that best matches your needed use-case. If you need additional assistance, please contact <a href="../../help/support/">Support</a>.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Platform</th>
+<th align="left"><a href="../lts/">Long-term Storage</a></th>
+<th align="left"><a href="./#user-space">User Data and Home Directories</a></th>
+<th align="left"><a href="./#project-directory">Project Directories</a></th>
+<th align="left"><a href="./#network-scratch">Global Scratch</a></th>
+<th align="left"><a href="./#local-scratch">Local Scratch</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Data Use-Case</td>
+<td align="left">Data that rarely or never changes. Static data hosting. Acquired data pick-up repository.</td>
+<td align="left">General-purpose data storage.</td>
+<td align="left">Data to be shared among collaborator group and ready for analysis.</td>
+<td align="left">Temporary files created during analysis. Rolling file deletion over time.</td>
+<td align="left">Small files created during jobs. Must be deleted at the end of a job.</td>
+</tr>
+<tr>
+<td align="left">Default Quota</td>
+<td align="left">Individual: 5 TB<br>Group: 75 TB</td>
+<td align="left">5 TB</td>
+<td align="left">25 TB</td>
+<td align="left">100 TB</td>
+<td align="left">Small</td>
+</tr>
+<tr>
+<td align="left">Owner</td>
+<td align="left">Individual: per researcher<br>Group: Lab PI or Core Director</td>
+<td align="left">Individual Researchers</td>
+<td align="left">Lab PI or Core Director</td>
+<td align="left">Individual Researchers</td>
+<td align="left">Individual Researchers</td>
+</tr>
+<tr>
+<td align="left">Accessible From</td>
+<td align="left">- Cheaha<br>- Globus</td>
+<td align="left">- Cheaha<br>- Globus</td>
+<td align="left">- Cheaha<br>- Globus</td>
+<td align="left">Cheaha</td>
+<td align="left">Cheaha</td>
+</tr>
+<tr>
+<td align="left">Cheaha Path</td>
+<td align="left">No path; see <a href="../lts/interfaces/">LTS Interfaces</a>.</td>
+<td align="left"><code>/home/&lt;blazerid&gt;</code> (<code>$HOME</code>) and <code>/data/user/&lt;blazerid&gt;</code> (<code>$USER_DATA</code>)</td>
+<td align="left"><code>/data/project/&lt;name&gt;</code></td>
+<td align="left"><code>/scratch/&lt;blazerid&gt;</code> (<code>$USER_SCRATCH</code>)</td>
+<td align="left"><code>/local/$SLURM_JOB_ID</code></td>
+</tr>
+<tr>
+<td align="left">Read/Write (IO) Speed</td>
+<td align="left">Slower</td>
+<td align="left">Fast</td>
+<td align="left">Fast</td>
+<td align="left">Fast</td>
+<td align="left">Fastest</td>
+</tr>
+<tr>
+<td align="left">Responsibilities &amp; Procedures</td>
+<td align="left">PI/Director responsible for data and access control.</td>
+<td align="left"></td>
+<td align="left">PI/Director responsible for data and access control.</td>
+<td align="left">Data deleted after 30 days.</td>
+<td align="left">Data deleted as needed.</td>
+</tr>
+<tr>
+<td align="left">Access Control</td>
+<td align="left"><a href="../lts/policies/">Bucket policies</a></td>
+<td align="left">Self only</td>
+<td align="left"><a href="../../workflow_solutions/shell/#manage-permissions-of-files-and-directores-chmod"><code>chmod</code></a> and <a href="../../workflow_solutions/shell/#manage-researcher-access-to-files-and-directories-getfacl-setfacl">ACLs</a></td>
+<td align="left">Self only</td>
+<td align="left">Self only</td>
+</tr>
+<tr>
+<td align="left">How to Request</td>
+<td align="left">Upon request.</td>
+<td align="left">Comes with Cheaha account.</td>
+<td align="left">Upon request.</td>
+<td align="left">Comes with Cheaha account.</td>
+<td align="left">Comes with Cheaha account.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-individual-storage-solutions-are-available">What Individual Storage Solutions are Available?<a class="headerlink" href="#what-individual-storage-solutions-are-available" title="Permanent link">&para;</a></h2>
+<p>Every researcher has personal directories found at <code>/home/$USER</code> (or <code>$HOME</code>) and <code>/data/user/$USER</code> (or <code>$USER_DATA</code>), which are created automatically during account registration. These two locations are meant to store general data and can be used during active analysis. While there are no data retention policies in place, these spaces are not intended for long-term storage of data that changes infrequently. Traditionally, <code>$HOME</code> is intended to store scripts, supporting files, software configuration files, and toolboxes such as Anaconda virtual environments or R packages. In contrast, <code>$USER_DATA</code> is intended to store datasets and results for individual research projects.</p>
+<p>Individual allocations on Long-Term Storage (LTS) are also available upon request.</p>
+<h3 id="how-do-i-request-individual-long-term-storage">How Do I Request Individual Long-Term Storage?<a class="headerlink" href="#how-do-i-request-individual-long-term-storage" title="Permanent link">&para;</a></h3>
+<p>To request individual Long-Term Storage, please first read and understand how <a href="../lts/">Long-Term Storage</a> differs from traditional filesystems, like GPFS on Cheaha. Decide if it is suitable for your needs. Then please feel free to contact <a href="../../help/support/">Support</a>.</p>
+<h2 id="what-shared-storage-solutions-are-available">What Shared Storage Solutions are Available?<a class="headerlink" href="#what-shared-storage-solutions-are-available" title="Permanent link">&para;</a></h2>
+<p>Shared Storage is available via two services. We have Project Storage (located in <code>/data/project</code> or Cheaha) and <a href="../lts/">Long-Term Storage (LTS)</a>. The two offerings are suited to different sets of use-cases, so please read on to determine which may be most suitable.</p>
+<p>Project Storage is best-suited for changing or dynamic data. Specifically:</p>
+<ul>
+<li>Data needing/undergoing analysis</li>
+<li>Exploratory data</li>
+<li>Temporary data needed longer than 30 days</li>
+</ul>
+<p>In contrast, <a href="../lts/">Long-Term Storage</a> is best-suited for unchanging or static data. Specifically:</p>
+<ul>
+<li>Instrument-acquired data</li>
+<li>Completed analyses</li>
+<li>Hosting data for others to copy</li>
+<li>Hosting data for the public internet</li>
+<li>"Pick-up" and "drop-off" locations for data as part of a workflow</li>
+</ul>
+<p>Shared Storage is available for labs headed by a PI <em>and</em> for Core facilities headed by a director.</p>
+<p>Shared Storage is allocated on a per-organization basis, not on a per-person basis. If an individual researcher manages both a lab and a Core, they may request independent storage allocations for each organization. Each organization may request both Project Storage and Long-Term Storage.</p>
+<h3 id="how-do-i-request-shared-storage">How Do I Request Shared Storage?<a class="headerlink" href="#how-do-i-request-shared-storage" title="Permanent link">&para;</a></h3>
+<p>To request shared Project Storage or Long-Term Storage, please contact <a href="../../help/support/">Support</a>. To ensure prompt allocation of Shared Storage, please follow the guidelines below.</p>
+<ul>
+<li>Requests must be made to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#105;&#115;&#116;&#115;&#101;&#114;&#118;&#46;&#117;&#97;&#98;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#105;&#115;&#116;&#115;&#101;&#114;&#118;&#46;&#117;&#97;&#98;&#46;&#101;&#100;&#117;</a> or via the <a href="https://www.uab.edu/it/home/">AskIT HelpDesk</a>.</li>
+<li>Requests must come from one of the proposed owners.</li>
+<li>All proposed owners must have created their <a href="../../account_management/cheaha_account/">Research Computing accounts</a> at the time the request is made.</li>
+</ul>
+<p>Please provide the following information. Missing information can delay allocation of Shared Storage as we either look up the information, or ask followup questions.</p>
+<ul>
+<li><strong>Responsible Party/Owner:</strong> The BlazerID of the person claiming reponsibility for what happens and what is stored in the space. Typically this would be a Principal Investigator (PI) or a Core Director.<ul>
+<li>Multiple responsible parties are allowed.</li>
+<li>We need one person declared as "primary" owner. This person will be the literal owner (in the Linux sense) for Project Storage.</li>
+</ul>
+</li>
+<li><strong>Members:</strong> A list of BlazerIDs of people to give access to the space. (Note: this only applies to Project Storage. LTS access controls are managed differently.)</li>
+<li><strong>Type of Organization:</strong> Is the Shared Storage request for a lab, core, campus administrative group, or something else?</li>
+<li><strong>Name of Organization:</strong> The <em>specific</em> name of the organization the Shared Storage request is for.</li>
+<li><strong>Parent Organization:</strong> The name of the parent organization for your organization. Please be as detailed as possible.</li>
+<li><strong>Purpose of Shared Storage:</strong> The research purpose for the storage, how do you intend to use it? Please feel free to be as detailed as you like, but please limit to a few sentences at most.</li>
+<li><strong>Internal UAB Collaborator Organizations:</strong> The name(s) of any other UAB organizations participating in the Shared Storage.</li>
+<li><strong>External Collaborator Organizations:</strong> The name(s) of any external organizations participating in the Shared Storage.</li>
+<li><strong>Regulatory Requirements:</strong> List any regulatory requirements or agencies affecting data to be stored in the space. Possibilities include, but are not limited to: IRB, EHR, HIPAA, PHI, FERPA.</li>
+<li><strong>Name of Shared Storage:</strong> Please give us a short, memorable name that is specific to your organization but general to your purpose.<ul>
+<li>For Project Storage, this name will be used in the <code>/data/project/&lt;name&gt;</code> path on Cheaha.</li>
+<li>For Labs we recommend the format <code>&lt;PI_blazerid&gt;-lab</code>.</li>
+<li>For Cores we recommend a shortened version of the Core name.</li>
+</ul>
+</li>
+</ul>
+<p>If some members have not created their accounts at the time of the request, we will proceed with allocating the Shared Storage. Additional members may be added at a later time in a new service request.</p>
+<h3 id="how-do-i-make-changes-to-shared-storage-membership">How Do I Make Changes to Shared Storage Membership?<a class="headerlink" href="#how-do-i-make-changes-to-shared-storage-membership" title="Permanent link">&para;</a></h3>
+<p>To request changes in Shared Storage membership, please contact <a href="../../help/support/">Support</a>. Please take note of the following guidelines to ensure changes can be made promptly.</p>
+<ul>
+<li>We must have written approval from an owner to make membership changes.</li>
+<li>The exact name of the Shared Storage. If it is Project Storage, the path to the storage location, i.e., <code>/data/project/...</code>.</li>
+<li>Please give BlazerIDs of members to add or remove.</li>
+</ul>
+<h3 id="project-directory-permissions">Project Directory Permissions<a class="headerlink" href="#project-directory-permissions" title="Permanent link">&para;</a></h3>
+<p>Every project directory has a group that is unique system-wide, and not used anywhere else on the filesystem. The unique project group will be referred to as <code>&lt;grp&gt;</code> and generally has the same name as the top level project directory.</p>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some early group names may not match their project directory, but should be reasonably close.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<p>Members of the project directory group have permissions to access that project directory. Adding and removing members from the project directory group is how Research Computing controls access to, and ownership of, project directories. We do not use access control lists (ACLs) to manage permissions ourselves, but use of ACLs is allowed and encouraged for PIs and project administrators who want more fine-grained control. Please see our <a href="../../workflow_solutions/shell/#manage-researcher-access-to-files-and-directories-getfacl-setfacl">section on ACLs</a> for more information.</p>
+<p>Be default, project space permissions are set up in the following way:</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Top level directory</th>
+<th align="left">Newly created files</th>
+<th align="left">Newly created directories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Numeric Permissions</td>
+<td align="left"><code>2770</code></td>
+<td align="left"><code>0664</code></td>
+<td align="left"><code>2775</code></td>
+</tr>
+<tr>
+<td align="left">Symbolic Permissions</td>
+<td align="left"><code>drwxrws---</code></td>
+<td align="left"><code>-rw-rw-r--</code></td>
+<td align="left"><code>drwxrwsr-x</code></td>
+</tr>
+<tr>
+<td align="left"><code>setgid</code> enabled</td>
+<td align="left">Yes</td>
+<td align="left"></td>
+<td align="left">Yes</td>
+</tr>
+<tr>
+<td align="left">User owner</td>
+<td align="left">PI/Admin</td>
+<td align="left">Creator</td>
+<td align="left">Creator</td>
+</tr>
+<tr>
+<td align="left">Group owner</td>
+<td align="left"><code>&lt;grp&gt;</code></td>
+<td align="left"><code>&lt;grp&gt;</code></td>
+<td align="left"><code>&lt;grp&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Having <code>setgid</code> enabled on directories means new files and directories created within will inherit group ownership and the <code>setgid</code> bit. The <code>setgid</code> bit is reflected by the <code>2</code> in the numeric permissions and the <code>s</code> in the symbolic permissions. The <code>setgid</code> bit and per-directory project groups is how Research Computing controls access to each project directory.</p>
+<p>There are some known issues surrounding project directory permissions when files are put into the project directory. Different commands have different behaviors. The following list describes the behaviors of various commands used to move and copy data, as well as good practices.</p>
+<ul>
+<li><code>mv</code> maintains all permissions and ownerships of the source file or directory.<ul>
+<li>For files and directories created outside the project directory, avoid using <code>mv</code>, prefer <code>cp</code> or similar instead. See below for alternatives.</li>
+<li>For files and directories created within the project directory, <code>mv</code> may work, but be sure the file has correct permissions and group ownership.</li>
+</ul>
+</li>
+<li><code>cp</code>, <code>tar -x</code>, <code>rsync</code>, <code>rclone</code>, <code>sftp</code> and Globus all behave as though creating a new file at the target location, by default. Prefer these commands when it is sensible to do so.<ul>
+<li>Avoid using the <code>-p</code> flag with <code>cp</code>, <code>tar</code>, <code>rsync</code> and <code>sftp</code>.</li>
+<li>When using the <code>-p</code> flag, files and directories will retain their source permissions.</li>
+<li>Retaining source permissions in project directories is undesirable behavior and can create headaches for you, your colleagues, and your project directory administrators and PIs.</li>
+</ul>
+</li>
+</ul>
+<p>For PIs and project administrators:</p>
+<ul>
+<li>Please educate your staff and collaborators about the above permission setups, and any additional ACLs you may have in place, to minimize future challenges.</li>
+<li>If you have issues with permissions, please contact <a href="../../help/support/#contact-us">Support</a>. We can guide you through <a href="../../workflow_solutions/shell/#manage-permissions-of-files-and-directores-chmod">Managing Permissions</a> and <a href="../../workflow_solutions/shell/#manage-group-ownership-chgrp">Managing Group Ownership</a>.</li>
+</ul>
+<h2 id="scratch">Scratch<a class="headerlink" href="#scratch" title="Permanent link">&para;</a></h2>
+<p>Two types of scratch space are provided for analyses currently being ran, network-mounted and local. These are spaces shared across users (though one user still cannot access another user's files without permission) and as such, data should be moved out of scratch when the analysis is finished.</p>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Starting January 2023, scratch data will have limited retention. See <a href="#scratch-retention-policy">Scratch Retention Policy</a> for more information.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<h3 id="user-scratch">User Scratch<a class="headerlink" href="#user-scratch" title="Permanent link">&para;</a></h3>
+<p>All users have access to a large, temporary, work-in-progress directory for storing data, called a scratch directory in <code>/scratch/$USER</code> or <code>$USER_SCRATCH</code>. Use this directory to store very large datasets or temporary pipeline intermediates for a short period of time while running your jobs. The maximum amount of data a single user can store in network scratch is 100 TB at once.</p>
+<p>Network scratch is available on the login node and each compute node. This storage is a GPFS high performance file system providing roughly 1 PB of storage. If using scratch, this should be your jobs' primary working directory, unless the job would benefit from local scratch (see below).</p>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Research Computing expects each user to keep their scratch areas clean. <strong>The cluster scratch areas are not to be used for archiving data.</strong> In order to keep scratch clear and usable for everyone, files older than 30 days will be automatically deleted.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<h3 id="local-scratch">Local Scratch<a class="headerlink" href="#local-scratch" title="Permanent link">&para;</a></h3>
+<p>Each compute node has a local scratch directory that is accessible via <code>/local/$SLURM_JOB_ID</code>. At this time, you will need to create the directory manually using <code>mkdir -p /local/$SLURM_JOB_ID</code>. If your job performs a lot of file I/O, the job should use <code>/local/$SLURM_JOB_ID</code> rather than <code>$USER_SCRATCH</code> to prevent bogging down the network scratch file system. It's important to recognize that most jobs run on the cluster do not fall under this category.</p>
+<p>If you are using <code>amperenodes</code> and the A100 GPUs, then it is highly recommended to move your input files to <code>/local/$SLURM_JOB_ID</code> prior to running your workflow, to ensure adequate GPU performance. Using <code>$USER_SCRATCH</code>, or other network file locations, will starve the GPU of data, resulting in poor performance. For more information please see <a href="../../cheaha/slurm/gpu/#ensuring-io-performance-with-a100-gpus">Ensuring IO Performance With A100 GPUs</a>.</p>
+<p>Be sure to clean up <code>/local/$SLURM_JOB_ID</code> after your job is complete! An example script to automate this process is shown below.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH ...</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># LOAD MODULES</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># module load ...</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># CREATE TEMPORARY DIRECTORY</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># WARNING! $TMPDIR will be deleted at the end of the script!</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># Changing the following line can cause permanent, unintended deletion of important data.</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nv">TMPDIR</span><span class="o">=</span><span class="s2">&quot;/local/</span><span class="nv">$USER</span><span class="s2">/</span><span class="nv">$SLURM_JOB_ID</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>mkdir -p <span class="s2">&quot;</span><span class="nv">$TMPDIR</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># COPY RESEARCH DATA TO LOCAL TEMPORARY DIRECTORY</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Replace $MY_DATA_DIR with the path to your data folder</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>cp -r <span class="s2">&quot;</span><span class="nv">$MY_DATA_DIR</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$TMPDIR</span><span class="s2">&quot;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># YOUR ORIGINAL WORKFLOW GOES HERE</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># be sure to load files from &quot;$TMPDIR&quot;!</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># CLEAN UP TEMPORARY DIRECTORY</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># WARNING!</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># Changing the following line can cause permanent, unintended deletion of important data.</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>rm -rf <span class="s2">&quot;</span><span class="nv">$TMPDIR</span><span class="s2">&quot;</span>
+</code></pre></div>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Using <code>/local/$SLURM_JOB_ID</code> with MPI jobs takes additional consideration. If you do not need MPI, please use the <code>#SBATCH --nodes=1</code> slurm directive to specify that all requested cores are on the same node. If you need the performance of <code>/local/$SLURM_JOB_ID</code> in an MPI job, please contact <a href="../../help/support/">Support</a> and read about the Slurm commands <code>sbcast</code> and <code>sgather</code>.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<h2 id="temporary-files-tmp">Temporary Files (<code>tmp</code>)<a class="headerlink" href="#temporary-files-tmp" title="Permanent link">&para;</a></h2>
+<p>Please do not use the directory <code>tmp</code> as storage for temporary files. The <code>tmp</code> directory is local to each node, and a full <code>tmp</code> directory harms compute performance on that node for all users. Instead, please use <a href="#local-scratch"><code>/local/$SLURM_JOB_ID</code></a> for fast access and <a href="#user-scratch"><code>$USER_SCRATCH</code></a> for larger space.</p>
+<p>Some software defaults to using <code>tmp</code> without any warning or documentation, especially software designed for personal computers. We may reach out to inform you if your software fills <code>tmp</code>, as it can harm performance on that compute node. If that happens we will work with you to identify ways of redirecting temporary storage to one of the scratch spaces.</p>
+<h3 id="software-known-to-use-tmp">Software Known to Use <code>tmp</code><a class="headerlink" href="#software-known-to-use-tmp" title="Permanent link">&para;</a></h3>
+<p>The following software are known to use <code>tmp</code> by default, and can be worked around by using the listed flags. See <a href="#local-scratch">Local Scratch</a> for more information about creating a local temporary directory.</p>
+<ul>
+<li><a href="https://docs.oracle.com/cd/E63231_01/doc/BIAIN/GUID-94C6B992-1488-4FC7-85EC-91E410D6E7D1.htm#BIAIN-GUID-94C6B992-1488-4FC7-85EC-91E410D6E7D1">Java</a>: <code>java * -Djava.io.tmpdir=/local/$SLURM_JOB_ID</code></li>
+<li><a href="https://umi-tools.readthedocs.io/en/latest/common_options.html">UMI Tools</a>: <code>umi_tools * --temp-dir=/local/$SLURM_JOB_ID</code></li>
+<li><a href="http://www.htslib.org/doc/samtools-sort.html">Samtools Sort</a>: <code>samtools sort * -T /local/$SLURM_JOB_ID</code></li>
+<li><a href="https://gatk.broadinstitute.org/hc/en-us/community/posts/360072269012--tmp-dir-option-user-error">GATK Tool</a>: <code>gatk --java-options * --tmp-dir /local/$SLURM_JOB_ID</code></li>
+<li><a href="https://docs.nvidia.com/clara/parabricks/4.0.1/gettingstarted.html">Parabricks</a>: <code>pbrun * --tmp-dir=/local/$SLURM_JOB_ID</code></li>
+<li><a href="https://home.cc.umanitoba.ca/~psgendb/doc/fastqc.help">FastQC</a>: <code>fastqc * -d /local/$SLURM_JOB_ID</code></li>
+<li><a href="https://manpages.org/macs2_callpeak">MACS2</a>: <code>macs2 callpeak * --tempdir /local/$SLURM_JOB_ID</code></li>
+</ul>
+<p>Software known to use <code>tmp</code> by default with no know workaround.</p>
+<ul>
+<li><a href="https://github.com/tensorflow/tensorflow/blob/5bb81b7b0dd140a4304b92530614502c0c61a150/tensorflow/python/keras/utils/data_utils.py#L205">Keras</a> has <code>/tmp/.keras</code> hardcoded as a fallback cache directory if <code>~/.keras</code> is inaccessible. See <a href="https://github.com/tensorflow/tensorflow/issues/38831">here</a> for a discussion of the issue.</li>
+</ul>
+<h2 id="how-much-space-do-i-have-left">How much space do I have left?<a class="headerlink" href="#how-much-space-do-i-have-left" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Individual Storage</strong>: use the command <code>quota-report</code> to see usage in <code>/data/user/$USER</code> and <code>/scratch/$USER</code>.</li>
+<li><strong>Project Storage</strong>: use the command <code>proj-quota-report &lt;project&gt;</code>. Replace <code>&lt;project&gt;</code> with the appropriate project directory name, i.e., <code>/data/project/&lt;project&gt;</code>. Be sure to <em>not</em> use a trailing slash. Use <code>proj-quota-report mylab</code> not <code>proj-quota-report mylab/</code>.</li>
+<li><strong>Long-Term Storage</strong>: please contact <a href="../../help/support/">Support</a>.</li>
+</ul>
+<p>Quota reports are updated nightly, so they may be out of date if you move data around before running these commands.</p>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Running out of space? Can't afford to remove any data? Please consider using our <a href="../lts/">Long Term Storage (LTS) system</a>.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<h2 id="data-responsibilities-and-procedures">Data Responsibilities and Procedures<a class="headerlink" href="#data-responsibilities-and-procedures" title="Permanent link">&para;</a></h2>
+<h3 id="archival">Archival<a class="headerlink" href="#archival" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Archival of data is the responsibility of researchers using Cheaha.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<p>At this time, Research Computing does not offer a method of archival. If you have need for archival, please feel free to contact <a href="../../help/support/">Support</a> to start a conversation.</p>
+<p>A possible external resource for archival is available through University of Oklahoma (OU) Supercomputing Center for Education and Research (OSCER). Please see the following link for details: <a href="https://www.ou.edu/oscer/resources/ourrstore--ou---regional-research-store">https://www.ou.edu/oscer/resources/ourrstore--ou---regional-research-store</a>.</p>
+<h3 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Backups of data are the responsibility of researchers using Cheaha.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<p>A good practice for backing up data is to use the 3-2-1 rule, as <a href="https://www.cisa.gov/uscert/security-publications/data-backup-options">recommended by US-CERT</a>:</p>
+<ul>
+<li><strong>3</strong>: Keep <strong>3</strong> copies of important data. 1 primary copy for use, 2 backup copies.</li>
+<li><strong>2</strong>: Store backup copies on <strong>2</strong> different media types to protect from media-specific hazards.</li>
+<li><strong>1</strong>: Store <strong>1</strong> backup copy offsite, located geographically distant from the primary copy.</li>
+</ul>
+<p>What hazards can cause data loss?</p>
+<ul>
+<li>Accidental file deletion.<ul>
+<li>Example: mistakenly deleting the wrong files when using the <a href="../../workflow_solutions/shell/#delete-files-and-directories-rm-rmdir">shell command</a> <code>rm</code>.</li>
+<li>Files deleted with <code>rm</code> or any similar command can not be recovered by us under any circumstances.</li>
+<li>Please restore from a backup.</li>
+</ul>
+</li>
+<li>Natural disasters.<ul>
+<li>Examples: tornado; hurricane.</li>
+<li>All of our data sits in one geographical location at the UAB Technology Innovation Center (TIC).</li>
+<li>Plans to add geographical data redundancy are being considered.</li>
+<li>Please restore from an offsite backup.</li>
+</ul>
+</li>
+<li>Unusable backups.<ul>
+<li>Examples: backup software bug; media destroyed; natural disaster at offsite location.</li>
+<li>Regularly test data restoration from all backups.</li>
+</ul>
+</li>
+</ul>
+<p>How can I ensure data integrity?</p>
+<ul>
+<li>Regularly back up your (and your lab's) data in an offsite location.</li>
+<li><a href="../lts/">S3 based long-term storage (LTS)</a> can be used for short-term onsite backup.</li>
+<li>Crashplan licenses are available for automatic offsite backups, please contact <a href="../../help/support/">Support</a> for more information.</li>
+</ul>
+<h3 id="hipaa-compliance">HIPAA Compliance<a class="headerlink" href="#hipaa-compliance" title="Permanent link">&para;</a></h3>
+<p>Cheaha is HIPAA compliant and can accept Protected Health Information (PHI) data. Currently, <a href="../lts/">long-term storage</a> is NOT HIPAA compliant but will be in the future.</p>
+<p>For UAB policies surrounding PHI data, please see the following URLs.</p>
+<ul>
+<li><a href="https://www.uab.edu/it/home/policies/data-classification/classification-overview">Data Classification</a></li>
+<li><a href="https://secure2.compliancebridge.com/uab/portal/getdoc.php?file=302">Data Protection and Security Policy</a></li>
+<li><a href="https://secure2.compliancebridge.com/uab/portal/getdoc.php?file=301">Data Access Policy</a></li>
+<li><a href="https://www.uab.edu/it/home/policies/compliance/hipaa">HIPAA Data Policy</a></li>
+</ul>
+<!-- markdownlint-disable MD046 -->
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It is the responsibility of researchers to make sure PHI is accessible <em>only</em> to people on the relevant IRB, with a demonstrated need to know. If PHI is stored in a project directory where some researchers are not on the IRB, their access to those files should be restricted using Access Control Lists (ACLs). Access control should be planned in advance of moving PHI data to Cheaha. If you need assistance setting up ACLs properly, please contact <a href="../../help/support/">Support</a>.</p>
+</div>
+<!-- markdownlint-enable MD046 -->
+
+<p>Managing PHI data can be challenging. There are experts on Campus who can provide assistance. Please contact <a href="../../help/support/">Support</a> if you intend to use Research Computing services in combination with PHI and PHI-derived data.</p>
+<h3 id="scratch-retention-policy">Scratch Retention Policy<a class="headerlink" href="#scratch-retention-policy" title="Permanent link">&para;</a></h3>
+<p>Data stored in <code>/scratch</code> is subject to two limited retention policies.</p>
+<ul>
+<li>Each user will have a quota of 50 TB of scratch storage.</li>
+<li>Files will be retained for a maximum of 30 days.</li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2023</span>
+      
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../account_management/gitlab_account/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Gitlab Account" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Gitlab Account
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../lts/" class="md-footer__link md-footer__link--next" aria-label="Next: Long-Term Storage" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Long-Term Storage
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021-2022 The University of Alabama at Birmingham.<br /><b>Still stuck after reading?</b> Email us at <a href="mailto:support@listserv.uab.edu" class="supportemail">support@listserv.uab.edu</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+
+      <script src="../../assets/javascripts/bundle.1514a9a0.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+<script>
+  var elements = document.getElementsByClassName("lightgallery");
+  for (var i = 0; i < elements.length; i++) {
+    lightGallery(elements[i]);
+  }
+</script>
+
+  </body>
+</html>
