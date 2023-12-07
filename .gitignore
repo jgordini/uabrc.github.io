@@ -273,3 +273,9 @@ $RECYCLE.BIN/
 
 site/
 test.py
+docs/education/case_studies.md
+docs/education/images/parabricks_container.png
+docs/education/images/parabricks_fq2bam_results.png
+docs/education/images/parabricks_nvidia-smi.png
+docs/education/images/parabricks_singularity_shell.png
+docs/education/res/parabricks_exec_time.csv
